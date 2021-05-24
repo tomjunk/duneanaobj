@@ -1,3 +1,4 @@
 <lcgdict>
   <class name="caf::StandardRecord"/>
+  <class name="caf::SRGlobal"/>
 </lcgdict>
