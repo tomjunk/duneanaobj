@@ -1,5 +1,5 @@
 #ifndef DUNEANAOBJ_SRWEIGHTGLOBAL_H
-#define DUNEANAOBJ_SRWEIGHTLOBAL_H
+#define DUNEANAOBJ_SRWEIGHTGLOBAL_H
 
 #include "duneanaobj/StandardRecord/SRSystParamHeader.h"
 
