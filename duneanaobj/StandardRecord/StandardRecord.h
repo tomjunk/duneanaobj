@@ -187,7 +187,9 @@ namespace caf
 
     // First index is systematic ID
     std::vector<std::vector<float>> xsSyst_wgt;
+
     float total_xsSyst_cv_wgt;
+    std::vector<float> cvwgt;
   };
   
 } // end namespace
