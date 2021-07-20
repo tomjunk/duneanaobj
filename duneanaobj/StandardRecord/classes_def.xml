@@ -1,4 +1,8 @@
 <lcgdict>
-  <class name="caf::StandardRecord"/>
-  <class name="caf::SRGlobal"/>
+  <class name="caf::StandardRecord" ClassVersion="10" >
+   <version ClassVersion="10" checksum="2482425987"/>
+  </class>
+  <class name="caf::SRGlobal" ClassVersion="10" >
+   <version ClassVersion="10" checksum="3775256529"/>
+  </class>
 </lcgdict>
