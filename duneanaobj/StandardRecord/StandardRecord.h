@@ -25,6 +25,11 @@ namespace caf
     StandardRecord();
     ~StandardRecord();
 
+    // Metadata
+    int meta_run;
+    int meta_subrun;
+    double pot;
+
     // Reco info
     float eRec_FromDep; // Unified parameterized reco that can be used at near and far. Should only be used for missing proton energy fake data studies that cannot use the CVN FD Reco
     float Ev_reco; // for ND?
@@ -40,11 +45,24 @@ namespace caf
     int reco_q;
     float Elep_reco;
     float theta_reco;
+    int reco_lepton_pdg;
 
     float RecoLepEnNue;
     float RecoHadEnNue;
     float RecoLepEnNumu;
     float RecoHadEnNumu;
+
+    double pileup_energy;
+
+    // gas TPC info
+    int nFSP;
+    std::vector<int> pdg;
+    std::vector<float> ptrue;
+    std::vector<float> trkLen;
+    std::vector<float> trkLenPerp;
+    std::vector<float> partEvReco;
+    int gastpc_pi_pl_mult;
+    int gastpc_pi_min_mult;
 
     int RecoMethodNue;  // 1 = longest reco track + hadronic, 2 = reco shower with highest charge + hadronic, 3 = all hit charges, -1 = not set
     int RecoMethodNumu; // 1 = longest reco track + hadronic, 2 = reco shower with highest charge + hadronic, 3 = all hit charges, -1 = not set
