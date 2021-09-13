@@ -2,7 +2,7 @@
 
 # The *parent* line must the first non-commented line and defines this product and version
 # The version should be of the form vxx_yy_zz (e.g. v01_02_03)
-parent duneanaobj v01_00_00
+parent duneanaobj v01_01_00
 defaultqual e20:gv3
 
 # These optional lines define the installed directories where headers,
@@ -26,9 +26,6 @@ defaultqual e20:gv3
 incdir  product_dir  include
 libdir  fq_dir       lib
 bindir  fq_dir       bin
-gdmldir product_dir
-fcldir  product_dir
-fwdir   product_dir scripts
 
 # With "product  version" table below, we now define dependencies
 # Add the dependent product and version
@@ -36,6 +33,7 @@ fwdir   product_dir scripts
 product             version       optional
 root                v6_22_08b     gv3
 root                v6_16_00      gv2
+root                v6_12_06a     gv1
 
 # list products required ONLY for the build
 # any products here must NOT have qualifiers
@@ -54,7 +52,9 @@ c7:gv3:prof    c7:p383b:prof
 e17:gv2:debug  e17:debug  
 e17:gv2:prof   e17:prof   
 c2:gv2:debug   c2:debug  
-c2:gv2:prof    c2:prof   
+c2:gv2:prof    c2:prof
+e15:gv1:prof   e15:prof
+e15:gv1:debug  e15:debug
 
 # Preserve tabs and formatting in emacs and vi / vim:
 
