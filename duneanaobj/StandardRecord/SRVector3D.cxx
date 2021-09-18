@@ -34,3 +34,9 @@ namespace caf
   }
 
 }
+
+std::ostream &operator<<(std::ostream &stream, const caf::SRVector3D &vec)
+{
+  stream << "(" << vec.x << "," << vec.y << "," << vec.z << ")";
+  return stream;
+}

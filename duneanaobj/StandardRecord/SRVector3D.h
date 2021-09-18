@@ -57,4 +57,8 @@ namespace caf
   };
 
 }
+
+// make writing these out easier
+std::ostream & operator<<(std::ostream & stream, const caf::SRVector3D & vec);
+
 #endif //DUNEANAOBJ_SRVECTOR3D_H
