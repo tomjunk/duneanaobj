@@ -19,6 +19,8 @@ namespace caf
       SRVector3D end;        ///< Track 3D end point
       SRVector3D end_dir;    ///< Unit vector representing estimate of track direction *taken from endpoint*
 
+      float Evis  = -999.;   ///< Visible energy in voxels corresponding to this track
+
       SRParticleTruth truth; ///< Best-match GEANT truth particle for this track
   };
 
