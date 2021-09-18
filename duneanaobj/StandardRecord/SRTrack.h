@@ -24,4 +24,7 @@ namespace caf
 
 }
 
+std::ostream & operator<<(std::ostream & stream, const caf::SRTrack & tr);
+
+
 #endif //DUNEANAOBJ_SRTRACK_H
