@@ -11,6 +11,8 @@
 
 #include <vector>
 
+#include "duneanaobj/StandardRecord/SRNDLAr.h"
+
 /// Common Analysis Files
 namespace caf
 {
@@ -53,6 +55,8 @@ namespace caf
     float RecoHadEnNumu;
 
     double pileup_energy;
+
+    SRNDLAr  ndlar;
 
     // gas TPC info
     int nFSP;
