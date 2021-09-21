@@ -4,9 +4,21 @@
    <version ClassVersion="11" checksum="151255278"/>
    <version ClassVersion="10" checksum="2482425987"/>
   </class>
+
   <class name="caf::SRGlobal" ClassVersion="10" >
    <version ClassVersion="10" checksum="3775256529"/>
   </class>
+
   <class name="caf::SRWeightGlobal"></class>
   <class name="caf::SRSystParamHeader"></class>
+
+  <class name="caf::SRNDLAr"></class>
+
+  <class name="caf::SRTrack"></class>
+  <class name="std::vector<caf::SRTrack>"></class>
+
+  <class name="caf::SRShower"></class>
+  <class name="std::vector<caf::SRShower>"></class>
+
+  <class name="caf::SRVector3D"></class>
 </lcgdict>
