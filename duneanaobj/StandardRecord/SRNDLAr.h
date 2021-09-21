@@ -8,6 +8,7 @@
 #define DUNEANAOBJ_SRNDLAR_H
 
 #include "duneanaobj/StandardRecord/SRTrack.h"
+#include "duneanaobj/StandardRecord/SRShower.h"
 
 namespace caf
 {
@@ -17,6 +18,9 @@ namespace caf
     public:
       std::vector<SRTrack> tracks;
       std::size_t          ntracks  = 0;
+
+      std::vector<SRShower> showers;
+      std::size_t           nshowers = 0;
   };
 
 }
