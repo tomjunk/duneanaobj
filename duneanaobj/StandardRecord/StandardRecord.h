@@ -12,6 +12,7 @@
 #include <vector>
 
 #include "duneanaobj/StandardRecord/SRNDLAr.h"
+#include "duneanaobj/StandardRecord/SRVector3D.h"
 
 /// Common Analysis Files
 namespace caf
@@ -184,6 +185,8 @@ namespace caf
     float LepE;
     float LepNuAngle;
 
+    SRVector3D LepEndpoint;
+
     // config
     int run, subrun, event;
     int isFD;
@@ -205,6 +208,7 @@ namespace caf
     float sigma_numu_pid;
     float sigma_nue_pid;
 
+    int nwgt_CrazyFlux;
     std::vector<float> wgt_CrazyFlux;
 
     // First index is systematic ID

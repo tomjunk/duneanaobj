@@ -34,6 +34,7 @@ namespace caf
     NuMomX(kNaN), NuMomY(kNaN), NuMomZ(kNaN),
     LepMomX(kNaN), LepMomY(kNaN), LepMomZ(kNaN), LepE(kNaN),
     LepNuAngle(kNaN),
+    LepEndpoint{kNaN, kNaN, kNaN},
     run(-1), subrun(-1), event(-1),
     isFD(-1), isFHC(-1),
     CVNResultIsAntineutrino(kNaN),
@@ -44,7 +45,7 @@ namespace caf
     CVNResult0Neutrons(kNaN), CVNResult1Neutrons(kNaN), CVNResult2Neutrons(kNaN), CVNResultNNeutrons(kNaN),
     RegCNNNueE(kNaN),
     sigma_Ev_reco(kNaN), sigma_Elep_reco(kNaN), sigma_numu_pid(kNaN), sigma_nue_pid(kNaN),
-    wgt_CrazyFlux(), xsSyst_wgt(),
+    nwgt_CrazyFlux(0), wgt_CrazyFlux(), xsSyst_wgt(),
     total_xsSyst_cv_wgt(kNaN)
   {
   }
