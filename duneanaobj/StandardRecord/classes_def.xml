@@ -1,5 +1,9 @@
 <lcgdict>
-  <class name="caf::StandardRecord" ClassVersion="12" >
+  <class name="caf::StandardRecord" ClassVersion="16" >
+   <version ClassVersion="16" checksum="3561138882"/>
+   <version ClassVersion="15" checksum="2381161406"/>
+   <version ClassVersion="14" checksum="186184242"/>
+   <version ClassVersion="13" checksum="3167178798"/>
    <version ClassVersion="12" checksum="1271137447"/>
    <version ClassVersion="11" checksum="151255278"/>
    <version ClassVersion="10" checksum="2482425987"/>
@@ -9,16 +13,37 @@
    <version ClassVersion="10" checksum="3775256529"/>
   </class>
 
-  <class name="caf::SRWeightGlobal"></class>
-  <class name="caf::SRSystParamHeader"></class>
+  <class name="caf::SRWeightGlobal" ClassVersion="10">
+   <version ClassVersion="10" checksum="1612203321"/>
+  </class>
+  <class name="caf::SRSystParamHeader" ClassVersion="10">
+   <version ClassVersion="10" checksum="621537544"/>
+  </class>
 
-  <class name="caf::SRNDLAr"></class>
+  <class name="caf::SRNDLAr" ClassVersion="10">
+   <version ClassVersion="10" checksum="3845592869"/>
+  </class>
 
-  <class name="caf::SRTrack"></class>
-  <class name="std::vector<caf::SRTrack>"></class>
+  <class name="caf::SRTrack" ClassVersion="10">
+   <version ClassVersion="10" checksum="3745325895"/>
+  </class>
+  <class name="std::vector<caf::SRTrack>">
+  </class>
 
-  <class name="caf::SRShower"></class>
-  <class name="std::vector<caf::SRShower>"></class>
+  <class name="caf::SRShower" ClassVersion="10">
+   <version ClassVersion="10" checksum="2243636990"/>
+  </class>
+  <class name="std::vector<caf::SRShower>">
+  </class>
 
-  <class name="caf::SRVector3D"></class>
+  <class name="caf::SRLorentzVector" ClassVersion="10">
+   <version ClassVersion="10" checksum="2776633038"/>
+  </class>
+  <class name="caf::SRVector3D" ClassVersion="10">
+   <version ClassVersion="10" checksum="2884901936"/>
+  </class>
+
+  <class name="caf::SRParticleTruth" ClassVersion="10">
+   <version ClassVersion="10" checksum="1145477858"/>
+  </class>
 </lcgdict>
