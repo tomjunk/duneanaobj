@@ -5,6 +5,9 @@
 
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
+#include <cmath>
+#include <limits>
+
 namespace caf
 {
   SRVector3D::SRVector3D() :
