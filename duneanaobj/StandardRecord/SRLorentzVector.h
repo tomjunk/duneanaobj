@@ -9,9 +9,18 @@
 #ifndef DUNEANAOBJ_SRLORENTZVECTOR_H
 #define DUNEANAOBJ_SRLORENTZVECTOR_H
 
+#if !defined(__GCCXML__) && !defined(__castxml__)
+
+#include <cmath>
+#include <limits>
+
 #include "TMath.h"
 #include "TLorentzVector.h"
 #include "TVector3.h"
+
+#endif
+
+
 
 namespace caf
 {
@@ -21,7 +30,8 @@ namespace caf
       SRLorentzVector();
       virtual ~SRLorentzVector() = default;
 
-#ifndef __GCCXML__
+#if !defined(__GCCXML__) && !defined(__castxml__)
+
       SRLorentzVector(const TLorentzVector& v);
 
       /// Recommend users convert back to TLorentzVector for boosts etc
@@ -33,9 +43,9 @@ namespace caf
       float X() const {return px;}
       float Y() const {return py;}
       float Z() const {return pz;}
-      float Mag() const {return TMath::Sqrt(px*px + py*py + pz*pz);}
+      float Mag() const {return sqrt(px*px + py*py + pz*pz);}
       float Beta() const {return Mag()/E;}
-      float Gamma() const {return 1.0/TMath::Sqrt(1-Beta()*Beta());}
+      float Gamma() const {return 1.0/sqrt(1-Beta()*Beta());}
 
       TVector3 Vect() const {return TVector3(px, py, pz);}
 #endif

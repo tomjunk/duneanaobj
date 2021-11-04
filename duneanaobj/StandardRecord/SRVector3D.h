@@ -9,7 +9,15 @@
 #ifndef DUNEANAOBJ_SRVECTOR3D_H
 #define DUNEANAOBJ_SRVECTOR3D_H
 
+#if !defined(__GCCXML__) && !defined(__castxml__)
+
+#include <cmath>
+#include <iostream>
+
 #include "TVector3.h"
+
+#endif
+
 
 namespace caf
 {
@@ -19,13 +27,17 @@ namespace caf
     public:
       SRVector3D();
       SRVector3D(float x, float y, float z);
+
+#if !defined(__GCCXML__) && !defined(__castxml__)
       /// Easy conversion from TVector3
-      SRVector3D(const TVector3& v);
+      explicit SRVector3D(const TVector3& v);
+#endif
 
       virtual ~SRVector3D() = default;
 
       void SetXYZ(float x, float y, float z);
 
+#if !defined(__GCCXML__) && !defined(__castxml__)
       /// Easy conversion back to TVector3
       operator TVector3() const;
 
@@ -49,6 +61,11 @@ namespace caf
         return SRVector3D(x/m, y/m, z/m);
       }
 
+      // a few more of them...
+      SRVector3D operator+(const SRVector3D & other) const { return SRVector3D(x + other.x, y + other.y, z + other.z); }
+      SRVector3D operator-(const SRVector3D & other) const {return SRVector3D(x - other.x, y - other.y, z - other.z); }
+#endif
+
       // -----------------------------
 
       float x;
@@ -58,7 +75,9 @@ namespace caf
 
 }
 
+#if !defined(__GCCXML__) && !defined(__castxml__)
 // make writing these out easier
 std::ostream & operator<<(std::ostream & stream, const caf::SRVector3D & vec);
+#endif
 
 #endif //DUNEANAOBJ_SRVECTOR3D_H

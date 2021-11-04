@@ -26,7 +26,8 @@ namespace caf
 
 }
 
+#if !defined(__GCCXML__) && !defined(__castxml__)
 std::ostream & operator<<(std::ostream & stream, const caf::SRTrack & tr);
-
+#endif
 
 #endif //DUNEANAOBJ_SRTRACK_H
