@@ -5,6 +5,8 @@
 
 #include "duneanaobj/StandardRecord/SRLorentzVector.h"
 
+#include <limits>
+
 namespace caf
 {
   SRLorentzVector::SRLorentzVector() :
