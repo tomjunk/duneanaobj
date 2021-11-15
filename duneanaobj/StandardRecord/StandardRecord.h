@@ -12,6 +12,7 @@
 #include <vector>
 
 #include "duneanaobj/StandardRecord/SRNDLAr.h"
+#include "duneanaobj/StandardRecord/SRTMS.h"
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
 /// Common Analysis Files
@@ -58,6 +59,7 @@ namespace caf
     double pileup_energy;
 
     SRNDLAr  ndlar;
+    SRTMS  ndtms;
 
     // gas TPC info
     int nFSP;
