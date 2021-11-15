@@ -61,6 +61,8 @@ namespace caf
     SRNDLAr  ndlar;
     SRTMS  ndtms;
 
+    std::vector<caf::SRNDTrackMatch> ndtrkmatches;
+
     // gas TPC info
     int nFSP;
     std::vector<int> pdg;
