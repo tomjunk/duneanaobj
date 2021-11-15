@@ -4,15 +4,15 @@
 #ifndef DUNEANAOBJ_SRNDTRACKMATCH_H
 #define DUNEANAOBJ_SRNDTRACKMATCH_H
 
-
-class SRNDTrackMatch
-{
-  public:
-    int larTrkIdx;
-    int tmsTrkIdx;
-    float xverseDispl;
-    float angularDsipl;
-};
-
+namespace caf{
+	class SRNDTrackMatch
+	{
+  	public:
+    		int larTrkIdx;
+    		int tmsTrkIdx;
+    		float xverseDispl;
+    		float angularDsipl;
+	};
+}
 
 #endif //DUNEANAOBJ_SRNDTRACKMATCH_H
