@@ -9,10 +9,10 @@ namespace caf
   class SRNDTrackMatch
   {
     public:
-      int larTrkIdx;
-      int tmsTrkIdx;
-      float xverseDispl;
-      float angularDsipl;
+      int larTrkIdx       = -1;
+      int tmsTrkIdx       = -1;
+      float xverseDispl   = -999.;
+      float angularDsipl  = -999.;
   };
 }
 
