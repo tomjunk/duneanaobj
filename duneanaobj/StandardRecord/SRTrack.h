@@ -17,7 +17,8 @@ namespace caf
     public:
       SRVector3D start;      ///< Track 3D start point
       SRVector3D end;        ///< Track 3D end point
-      SRVector3D enddir;    ///< Unit vector representing estimate of track direction *taken from endpoint*
+      SRVector3D dir;        ///< Unit vector representing estimate of track direction *taken from start point*
+      SRVector3D enddir;     ///< Unit vector representing estimate of track direction *taken from endpoint*
 
       float Evis  = -999.;   ///< Visible energy in voxels corresponding to this track
 
