@@ -16,7 +16,7 @@ namespace caf
   class SRParticleTruth
   {
     public:
-      int   trkID     = 0;   ///< GEANT trackId for particle
+      int   trkid     = 0;   ///< GEANT trackId for particle
       int   pdg       = 0;   ///< PDG Code of the best matched truth particle
       int   motherpdg = 0;   ///< PDG Code of the mother of the best matched truth particle
 

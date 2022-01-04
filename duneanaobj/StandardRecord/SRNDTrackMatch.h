@@ -9,10 +9,10 @@ namespace caf
   class SRNDTrackMatch
   {
     public:
-      int larTrkIdx       = -1;
-      int tmsTrkIdx       = -1;
-      float xverseDispl   = -999.;
-      float angularDispl  = -999.;
+      int larid         = -1;        ///< index of ND-LAr track
+      int tmsid         = -1;        ///< index of TMS track
+      float transdispl  = -999.;     ///< perpendicular distance between the two tracks at longitudinal position of matching point
+      float angdispl    = -999.;     ///< angular difference between the two tracks at longitudinal position of matching point
   };
 }
 
