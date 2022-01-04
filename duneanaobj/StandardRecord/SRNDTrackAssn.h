@@ -1,12 +1,13 @@
 /// \author  J. Wolcott <jwolcott@fnal.gov> & F. Akbar <fakbar@ur.rochester.edu>
 /// \date    Nov. 2021
 
-#ifndef DUNEANAOBJ_SRNDTRACKMATCH_H
-#define DUNEANAOBJ_SRNDTRACKMATCH_H
+#ifndef DUNEANAOBJ_SRNDTRACKASSN_H
+#define DUNEANAOBJ_SRNDTRACKASSN_H
+
 
 namespace caf
 {
-  class SRNDTrackMatch
+  class SRNDTrackAssn
   {
     public:
       int larid         = -1;        ///< index of ND-LAr track
@@ -16,4 +17,4 @@ namespace caf
   };
 }
 
-#endif //DUNEANAOBJ_SRNDTRACKMATCH_H
+#endif //DUNEANAOBJ_SRNDTRACKASSN_H

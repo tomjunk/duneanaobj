@@ -11,9 +11,7 @@
 
 #include <vector>
 
-#include "duneanaobj/StandardRecord/SRNDLAr.h"
-#include "duneanaobj/StandardRecord/SRTMS.h"
-#include "duneanaobj/StandardRecord/SRNDTrackMatch.h"
+#include "duneanaobj/StandardRecord/SRNDBranch.h"
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
 /// Common Analysis Files
@@ -59,20 +57,7 @@ namespace caf
 
     double pileup_energy;
 
-    SRNDLAr  ndlar;
-    SRTMS  ndtms;
-
-    std::vector<caf::SRNDTrackMatch> ndtrkmatches;
-
-    // gas TPC info
-    int nFSP;
-    std::vector<int> pdg;
-    std::vector<float> ptrue;
-    std::vector<float> trkLen;
-    std::vector<float> trkLenPerp;
-    std::vector<float> partEvReco;
-    int gastpc_pi_pl_mult;
-    int gastpc_pi_min_mult;
+    SRNDBranch nd;
 
     int RecoMethodNue;  // 1 = longest reco track + hadronic, 2 = reco shower with highest charge + hadronic, 3 = all hit charges, -1 = not set
     int RecoMethodNumu; // 1 = longest reco track + hadronic, 2 = reco shower with highest charge + hadronic, 3 = all hit charges, -1 = not set
