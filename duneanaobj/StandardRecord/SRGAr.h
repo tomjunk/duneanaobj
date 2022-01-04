@@ -13,7 +13,7 @@
 namespace caf
 {
   /// ND-GAr reconstruction output
-  class SRGAR
+  class SRGAr
   {
     public:
       // for the moment, these "pseudo-reco" fields are just copied from the old ND_CAFMaker branches.
