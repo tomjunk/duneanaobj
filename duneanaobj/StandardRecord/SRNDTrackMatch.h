@@ -12,7 +12,7 @@ namespace caf
       int larTrkIdx       = -1;
       int tmsTrkIdx       = -1;
       float xverseDispl   = -999.;
-      float angularDsipl  = -999.;
+      float angularDispl  = -999.;
   };
 }
 
