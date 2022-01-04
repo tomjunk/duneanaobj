@@ -1,11 +1,6 @@
 <lcgdict>
-  <class name="caf::StandardRecord" ClassVersion="16" >
-   <version ClassVersion="16" checksum="3561138882"/>
-   <version ClassVersion="15" checksum="2381161406"/>
-   <version ClassVersion="14" checksum="186184242"/>
-   <version ClassVersion="13" checksum="3167178798"/>
-   <version ClassVersion="12" checksum="1271137447"/>
-   <version ClassVersion="11" checksum="151255278"/>
+  <class name="caf::StandardRecord" ClassVersion="11" >
+   <version ClassVersion="11" checksum="3597577923"/>
    <version ClassVersion="10" checksum="2482425987"/>
   </class>
 
@@ -20,12 +15,24 @@
    <version ClassVersion="10" checksum="621537544"/>
   </class>
 
+  <class name="caf::SRNDBranch" ClassVersion="10">
+   <version ClassVersion="10" checksum="2431680929"/>
+  </class>
+
   <class name="caf::SRNDLAr" ClassVersion="10">
    <version ClassVersion="10" checksum="3845592869"/>
   </class>
 
+  <class name="caf::SRGAr" ClassVersion="10">
+   <version ClassVersion="10" checksum="2529880392"/>
+  </class>
+
+  <class name="caf::SRTMS" ClassVersion="10">
+   <version ClassVersion="10" checksum="418048849"/>
+  </class>
+
   <class name="caf::SRTrack" ClassVersion="10">
-   <version ClassVersion="10" checksum="3745325895"/>
+   <version ClassVersion="10" checksum="4110567994"/>
   </class>
   <class name="std::vector<caf::SRTrack>">
   </class>
@@ -44,6 +51,6 @@
   </class>
 
   <class name="caf::SRParticleTruth" ClassVersion="10">
-   <version ClassVersion="10" checksum="1145477858"/>
+   <version ClassVersion="10" checksum="3381095522"/>
   </class>
 </lcgdict>
