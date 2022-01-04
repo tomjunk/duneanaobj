@@ -11,6 +11,9 @@
 
 #include <vector>
 
+#include "duneanaobj/StandardRecord/SRNDBranch.h"
+#include "duneanaobj/StandardRecord/SRVector3D.h"
+
 /// Common Analysis Files
 namespace caf
 {
@@ -24,6 +27,11 @@ namespace caf
   public:
     StandardRecord();
     ~StandardRecord();
+
+    // Metadata
+    int meta_run;
+    int meta_subrun;
+    double pot;
 
     // Reco info
     float eRec_FromDep; // Unified parameterized reco that can be used at near and far. Should only be used for missing proton energy fake data studies that cannot use the CVN FD Reco
@@ -40,11 +48,16 @@ namespace caf
     int reco_q;
     float Elep_reco;
     float theta_reco;
+    int reco_lepton_pdg;
 
     float RecoLepEnNue;
     float RecoHadEnNue;
     float RecoLepEnNumu;
     float RecoHadEnNumu;
+
+    double pileup_energy;
+
+    SRNDBranch nd;
 
     int RecoMethodNue;  // 1 = longest reco track + hadronic, 2 = reco shower with highest charge + hadronic, 3 = all hit charges, -1 = not set
     int RecoMethodNumu; // 1 = longest reco track + hadronic, 2 = reco shower with highest charge + hadronic, 3 = all hit charges, -1 = not set
@@ -162,6 +175,8 @@ namespace caf
     float LepE;
     float LepNuAngle;
 
+    SRVector3D LepEndpoint;
+
     // config
     int run, subrun, event;
     int isFD;
@@ -183,6 +198,7 @@ namespace caf
     float sigma_numu_pid;
     float sigma_nue_pid;
 
+    int nwgt_CrazyFlux;
     std::vector<float> wgt_CrazyFlux;
 
     // First index is systematic ID

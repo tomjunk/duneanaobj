@@ -1,8 +1,56 @@
 <lcgdict>
-  <class name="caf::StandardRecord" ClassVersion="10" >
+  <class name="caf::StandardRecord" ClassVersion="11" >
+   <version ClassVersion="11" checksum="3597577923"/>
    <version ClassVersion="10" checksum="2482425987"/>
   </class>
+
   <class name="caf::SRGlobal" ClassVersion="10" >
    <version ClassVersion="10" checksum="3775256529"/>
+  </class>
+
+  <class name="caf::SRWeightGlobal" ClassVersion="10">
+   <version ClassVersion="10" checksum="1612203321"/>
+  </class>
+  <class name="caf::SRSystParamHeader" ClassVersion="10">
+   <version ClassVersion="10" checksum="621537544"/>
+  </class>
+
+  <class name="caf::SRNDBranch" ClassVersion="10">
+   <version ClassVersion="10" checksum="2431680929"/>
+  </class>
+
+  <class name="caf::SRNDLAr" ClassVersion="10">
+   <version ClassVersion="10" checksum="3845592869"/>
+  </class>
+
+  <class name="caf::SRGAr" ClassVersion="10">
+   <version ClassVersion="10" checksum="2529880392"/>
+  </class>
+
+  <class name="caf::SRTMS" ClassVersion="10">
+   <version ClassVersion="10" checksum="418048849"/>
+  </class>
+
+  <class name="caf::SRTrack" ClassVersion="10">
+   <version ClassVersion="10" checksum="4110567994"/>
+  </class>
+  <class name="std::vector<caf::SRTrack>">
+  </class>
+
+  <class name="caf::SRShower" ClassVersion="10">
+   <version ClassVersion="10" checksum="2243636990"/>
+  </class>
+  <class name="std::vector<caf::SRShower>">
+  </class>
+
+  <class name="caf::SRLorentzVector" ClassVersion="10">
+   <version ClassVersion="10" checksum="2776633038"/>
+  </class>
+  <class name="caf::SRVector3D" ClassVersion="10">
+   <version ClassVersion="10" checksum="2884901936"/>
+  </class>
+
+  <class name="caf::SRParticleTruth" ClassVersion="10">
+   <version ClassVersion="10" checksum="3381095522"/>
   </class>
 </lcgdict>
