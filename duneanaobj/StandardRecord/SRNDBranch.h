@@ -24,6 +24,11 @@ namespace caf
 
       std::size_t ntrkmatch = 0;
       std::vector<caf::SRNDTrackAssn> trkmatch;
+    
+      std::size_t LArID = 0;
+      std::size_t TMSID = 0;
+      std::float_t Residual = 0.0;
+      std::float_t cosTheta = 0.0;
   };
 }
 
