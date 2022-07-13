@@ -30,12 +30,12 @@ bindir  fq_dir       bin
 # With "product  version" table below, we now define dependencies
 # Add the dependent product and version
 
-# product             version       optional
+product             version       optional
+cetbuildtools  v8_20_00 - only_for_build
 root                v6_22_08b     gv3
 root                v6_16_00      gv2
 root                v6_12_06a     gv1
-
-cetbuildtools  v7_17_01 - only_for_build
+end_product_list
 
 # We now define allowed qualifiers and the corresponding qualifiers for the dependencies.
 # Make the table by adding columns before "notes".

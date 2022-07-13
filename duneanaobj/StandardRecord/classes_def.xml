@@ -15,7 +15,8 @@
    <version ClassVersion="10" checksum="621537544"/>
   </class>
 
-  <class name="caf::SRNDBranch" ClassVersion="10">
+  <class name="caf::SRNDBranch" ClassVersion="11">
+   <version ClassVersion="11" checksum="688841544"/>
    <version ClassVersion="10" checksum="2431680929"/>
   </class>
 
@@ -31,7 +32,8 @@
    <version ClassVersion="10" checksum="418048849"/>
   </class>
 
-  <class name="caf::SRTrack" ClassVersion="10">
+  <class name="caf::SRTrack" ClassVersion="11">
+   <version ClassVersion="11" checksum="1834229612"/>
    <version ClassVersion="10" checksum="4110567994"/>
   </class>
   <class name="std::vector<caf::SRTrack>">
