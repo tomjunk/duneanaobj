@@ -27,8 +27,8 @@ namespace caf
     
       std::size_t LArID = 0;
       std::size_t TMSID = 0;
-      std::float_t Residual = 0.0;
-      std::float_t cosTheta = 0.0;
+      float Residual = 0.0;
+      float cosTheta = 0.0;
   };
 }
 
