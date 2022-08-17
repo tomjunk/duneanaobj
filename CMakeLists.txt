@@ -16,6 +16,7 @@
 cmake_minimum_required (VERSION 3.12...3.18 FATAL_ERROR)
 
 project(duneanaobj LANGUAGES CXX)
+set(${PROJECT_NAME}_CMAKE_PROJECT_VERSION_STRING 02.00.01)
 
 message(STATUS "\n\n  ==========================   ${PROJECT_NAME}   ==========================")
 
@@ -43,6 +44,7 @@ cet_report_compiler_flags()
 
 # these are minimum required versions, not the actual product versions
 find_ups_root(v6_00_00)
+find_ups_product( cetbuildtools )
 
 include(BuildDictionary)
 
