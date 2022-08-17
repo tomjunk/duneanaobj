@@ -23,7 +23,7 @@ namespace caf
       float Evis  = -999.;   ///< Visible energy in voxels corresponding to this track
 
       // Track characteristics
-      float len_gcm3 = -999.; ///< Track length in g/cm3
+      float len_gcm2 = -999.; ///< Track length in g/cm2
       float E = -999; ///< Track energy in MeV
       float len_cm = -999; ///< Track length in centimeter (actual physical distance)
       float qual = -999; ///< Track quality metric (in TMS, equivalent to "hits in track"/"total hits in event"
