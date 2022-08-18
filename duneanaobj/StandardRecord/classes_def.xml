@@ -1,4 +1,10 @@
 <lcgdict>
+  <class name="caf::SRNDTrackAssn" ClassVersion="10">
+   <version ClassVersion="10" checksum="884165698"/>
+  </class>
+  <class name="std::vector<caf::SRNDTrackAssn>">
+  </class>
+
   <class name="caf::StandardRecord" ClassVersion="11" >
    <version ClassVersion="11" checksum="3597577923"/>
    <version ClassVersion="10" checksum="2482425987"/>
@@ -15,8 +21,9 @@
    <version ClassVersion="10" checksum="621537544"/>
   </class>
 
-  <class name="caf::SRNDBranch" ClassVersion="11">
-   <version ClassVersion="11" checksum="688841544"/>
+  <class name="caf::SRNDBranch" ClassVersion="12">
+   <version ClassVersion="12" checksum="2431680929"/>
+   <version ClassVersion="11" checksum="1041684133"/>
    <version ClassVersion="10" checksum="2431680929"/>
   </class>
 
@@ -32,8 +39,10 @@
    <version ClassVersion="10" checksum="418048849"/>
   </class>
 
-  <class name="caf::SRTrack" ClassVersion="11">
-   <version ClassVersion="11" checksum="1834229612"/>
+  <class name="caf::SRTrack" ClassVersion="13">
+   <version ClassVersion="13" checksum="1538684939"/>
+   <version ClassVersion="12" checksum="1834229612"/>
+   <version ClassVersion="11" checksum="1751365267"/>
    <version ClassVersion="10" checksum="4110567994"/>
   </class>
   <class name="std::vector<caf::SRTrack>">
