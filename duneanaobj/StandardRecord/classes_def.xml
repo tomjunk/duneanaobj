@@ -5,7 +5,8 @@
   <class name="std::vector<caf::SRNDTrackAssn>">
   </class>
 
-  <class name="caf::StandardRecord" ClassVersion="12" >
+  <class name="caf::StandardRecord" ClassVersion="13" >
+   <version ClassVersion="13" checksum="679832893"/>
    <version ClassVersion="12" checksum="2613264685"/>
    <version ClassVersion="11" checksum="3597577923"/>
    <version ClassVersion="10" checksum="2482425987"/>
