@@ -206,6 +206,31 @@ namespace caf
 
     float total_xsSyst_cv_wgt;
     std::vector<float> cvwgt;
+
+
+    // Dummy PRISM variables. These are required to make PRISM code in CAFAna
+    // compile but are NOT FILLED BY CURRENT CAFMAKER. They should not be used
+    // for anything, and should be removed ASAP (effective immediately as of
+    // their reluctant addition in September 2022) and replaced with proper
+    // variables within the standard structure that /are/ filled.
+    double perPOTWeight = -1;
+    double NDMassCorrWeight = -1;
+    double SpecialRunWeight = -1;
+    int SpecialHCRunId = -1;
+    int OffAxisFluxBin = -1;
+    int OffAxisFluxConfig = -1;
+    double abspos_x = -1;
+    double EVisReco_ND = -1;
+    double EVisReco_numu = -1;
+    double EVisReco_nue = -1;
+    double HadEVisReco_ND = -1;
+    double HadEVisReco_FD = -1;
+    double VisTrue_NDFD = -1;
+    double ProxyRecoLepE = -1;
+    double eRecProxy = -1;
+    double HadE = -1;
+    double ePipm = -1;
+    double eTotalPi0 = -1;
   };
   
 } // end namespace
