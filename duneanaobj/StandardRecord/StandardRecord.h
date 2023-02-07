@@ -9,8 +9,13 @@
 #ifndef DUNEANAOBJ_STANDARDRECORD_H
 #define DUNEANAOBJ_STANDARDRECORD_H
 
+#include <array>
+#include <bitset>
 #include <vector>
 
+#include "duneanaobj/StandardRecord/SRVector3D.h"
+
+#include "duneanaobj/StandardRecord/SRMeta.h"
 #include "duneanaobj/StandardRecord/SRNDBranch.h"
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
@@ -28,10 +33,16 @@ namespace caf
     StandardRecord();
     ~StandardRecord();
 
-    // Metadata
-    int meta_run;
-    int meta_subrun;
-    double pot;
+    /// \brief Which detectors does this CAF have info from?
+    /// Use, for example, `detectors[caf::Detector::kND_LAr]` to test if this CAF contains ND-LAr info
+    std::bitset<static_cast<std::size_t>(caf::Detector::_kLastDetector)> active_detectors;
+
+    /// \brief Per-detector metadata.
+    /// There's always one entry for each detector, though any that aren't actually represented in this CAF
+    /// will just contain default (NaN) values (and will be compressed away by ROOT compression in file storage).
+    /// You probably want to check the #active_detectors field before accessing them.
+    std::array<SRDetectorMeta, static_cast<std::size_t>(caf::Detector::_kLastDetector)> meta;
+
 
     // Reco info
     float eRec_FromDep; // Unified parameterized reco that can be used at near and far. Should only be used for missing proton energy fake data studies that cannot use the CVN FD Reco
