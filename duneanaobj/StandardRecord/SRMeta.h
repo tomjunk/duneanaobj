@@ -35,28 +35,28 @@ namespace caf
     // FD prototypes  (we don't have any ProtoDUNE-VD data that will be CAFfed?)
     kProtoDUNE = 15,  /// Horizontal drift prototype
 
-    _kLastDetector = kProtoDUNE  // to use in bitset sizing
+    _kLastDetector = 24  // to use in bitset sizing.  make it big enough that we'll never have to expand it ---> future-proof CAFs
   };
 
   class SRDetectorMeta
   {
     public:
-      caf::Detector detector;  ///<   which detector are we describing?
+      caf::Detector detector = Detector::kUnknown;  ///<   which detector are we describing?
 
-      unsigned int run = std::numeric_limits<unsigned int>::signaling_NaN();
-      unsigned int subrun = std::numeric_limits<unsigned int>::signaling_NaN();
-      unsigned int event = std::numeric_limits<unsigned int>::signaling_NaN();
-      unsigned int subevt = std::numeric_limits<unsigned int>::signaling_NaN();
+      unsigned int run    = 0;
+      unsigned int subrun = 0;
+      unsigned int event  = 0;
+      unsigned int subevt = 0;
 
       /// detector-dependent trigger type for the relevant readout window
-      unsigned int triggertype = std::numeric_limits<unsigned int>::signaling_NaN();
+      int triggertype = -1;
 
-      unsigned long int readoutstart_s = std::numeric_limits<unsigned long int>::signaling_NaN();   ///< GPS time of trigger readout start, seconds part
-      unsigned int readoutstart_ns = std::numeric_limits<unsigned long int>::signaling_NaN();       ///< GPS time of trigger readout start, nanoseconds part
-      unsigned long int readoutend_s = std::numeric_limits<unsigned long int>::signaling_NaN();   ///< GPS time of trigger readout end, seconds part
-      unsigned int readoutend_ns = std::numeric_limits<unsigned long int>::signaling_NaN();       ///< GPS time of trigger readout end, nanoseconds part
+      unsigned long int readoutstart_s = 0;   ///< GPS time of trigger readout start, seconds part
+      unsigned int readoutstart_ns     = 0;       ///< GPS time of trigger readout start, nanoseconds part
+      unsigned long int readoutend_s   = 0;   ///< GPS time of trigger readout end, seconds part
+      unsigned int readoutend_ns       = 0;       ///< GPS time of trigger readout end, nanoseconds part
 
-      double prism_offset = 0;  ///< For NDs that are part of the PRISM system, where (in meters relative to the beam center) was the detector center located for this run?
+      double prism_offset = std::numeric_limits<double>::signaling_NaN();  ///< For NDs that are part of the PRISM system, where (in meters relative to the beam center) was the detector center located for this run?
 
   };
 
