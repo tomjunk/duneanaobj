@@ -17,7 +17,7 @@
 
 #include "duneanaobj/StandardRecord/SRMeta.h"
 #include "duneanaobj/StandardRecord/SRNDBranch.h"
-#include "duneanaobj/StandardRecord/SRVector3D.h"
+#include "duneanaobj/StandardRecord/SRTruthBranch.h"
 
 /// Common Analysis Files
 namespace caf
@@ -43,6 +43,7 @@ namespace caf
     /// You probably want to check the #active_detectors field before accessing them.
     std::array<SRDetectorMeta, static_cast<std::size_t>(caf::Detector::_kLastDetector)> meta;
 
+    SRTruthBranch mc;
 
     // Reco info
     float eRec_FromDep; // Unified parameterized reco that can be used at near and far. Should only be used for missing proton energy fake data studies that cannot use the CVN FD Reco
