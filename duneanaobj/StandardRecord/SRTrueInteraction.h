@@ -110,6 +110,8 @@ namespace caf
 
        int                         nprim = 0;       ///< Number of primary daughters
        std::vector<SRTrueParticle> prim;            ///< Primary daughters.  The lepton always comes first in this vector.
+       int                         nprefsi = 0;     ///< How many primary daughters there were prior to FSI
+       std::vector<SRTrueParticle> prefsi;          ///< Primary daughters prior to FSI.
    };
 
 } // caf
