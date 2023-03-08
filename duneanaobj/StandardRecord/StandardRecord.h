@@ -117,15 +117,7 @@ namespace caf
     float eDepPi0;
     float eDepOther;
 
-    float NuMomX;
-    float NuMomY;
-    float NuMomZ;
-    float LepMomX;
-    float LepMomY;
-    float LepMomZ;
-    float LepE;
-    float LepNuAngle;
-
+    // ND? -- eliminate, should get from reco tracks
     SRVector3D LepEndpoint;
 
     // config
