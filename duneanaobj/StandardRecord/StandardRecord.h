@@ -100,8 +100,6 @@ namespace caf
     float vtx_y;
     float vtx_z;
 
-    // Near detector offset in m
-    float det_x;
 
     // Reconstructed energy of particles by species
     float eRecoP;
