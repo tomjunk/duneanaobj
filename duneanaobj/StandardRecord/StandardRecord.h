@@ -103,14 +103,6 @@ namespace caf
     // Near detector offset in m
     float det_x;
 
-    // True energy of particles by species
-    float eP;
-    float eN;
-    float ePip;
-    float ePim;
-    float ePi0;
-    float eOther;
-
     // Reconstructed energy of particles by species
     float eRecoP;
     float eRecoN;
