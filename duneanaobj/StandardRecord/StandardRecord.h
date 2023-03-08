@@ -15,6 +15,7 @@
 
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
+#include "duneanaobj/StandardRecord/SRBeamBranch.h"
 #include "duneanaobj/StandardRecord/SRMeta.h"
 #include "duneanaobj/StandardRecord/SRNDBranch.h"
 #include "duneanaobj/StandardRecord/SRTruthBranch.h"
@@ -120,10 +121,6 @@ namespace caf
     // ND? -- eliminate, should get from reco tracks
     SRVector3D LepEndpoint;
 
-    // config
-    int run, subrun, event;
-    int isFD;
-    int isFHC;
 
     // CVN outputs
     float CVNResultIsAntineutrino;
