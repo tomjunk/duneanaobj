@@ -31,6 +31,7 @@ namespace caf
   public:
     SRDetectorMetaBranch meta;
 
+    SRBeamBranch beam;
 
     SRTruthBranch mc;
 
