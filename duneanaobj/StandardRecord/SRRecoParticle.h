@@ -11,21 +11,12 @@
 
 namespace caf
 {
-  enum class PIDMethod
-  {
-      kUnknown,
-      kCVN,
-      kPandora,
-      kDeepLearnPhysics,
-  };
-
   enum class PartEMethod
   {
       kUnknown,
       kRange,
       kMCS,
       kCalorimetry,
-      kRegCNN,
   };
 
   /// \brief Reconstructed particle candidate
@@ -36,10 +27,11 @@ namespace caf
       static constexpr float NaN = std::numeric_limits<float>::signaling_NaN();
 
     public:
-      int         pdg       = 0;                      ///< PDG code inferred for this particle.  todo: what if it's a "hadronic blob" type of thing?
-      PIDMethod   id_method = PIDMethod::kUnknown;    ///< Method used to determine the PID for the particle
+      static constexpr int kPdgHadronicBlob = 2000000002;   ///< Special PDG code used for a "hadronic blob" (usu. calorimetrically reconstructed), borrowed from GENIE
 
-      float       score = NaN;                        ///< PID score for this particle, if relevant
+      int         pdg      = 0;                       ///< PDG code inferred for this particle.
+
+      float       score    = NaN;                     ///< PID score for this particle, if relevant
 
       float       E        = NaN;                     ///< Reconstructed energy for this particle
       PartEMethod E_method = PartEMethod::kUnknown;   ///< Method used to determine energy for the particle
