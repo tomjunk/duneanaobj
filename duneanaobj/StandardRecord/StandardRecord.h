@@ -48,17 +48,6 @@ namespace caf
     SRNDBranch nd;
 
 
-
-    int nwgt_CrazyFlux;
-    std::vector<float> wgt_CrazyFlux;
-
-    // First index is systematic ID
-    std::vector<std::vector<float>> xsSyst_wgt;
-
-    float total_xsSyst_cv_wgt;
-    std::vector<float> cvwgt;
-
-
     // Dummy PRISM variables. These are required to make PRISM code in CAFAna
     // compile but are NOT FILLED BY CURRENT CAFMAKER. They should not be used
     // for anything, and should be removed ASAP (effective immediately as of
