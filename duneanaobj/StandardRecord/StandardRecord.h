@@ -24,22 +24,26 @@ namespace caf
   
   /// \brief   The StandardRecord is the primary top-level object in the 
   ///          Common Analysis File trees.   
-  
-  class StandardRecord  
+  class StandardRecord
   {
-    
-  public:
-    SRDetectorMetaBranch meta;
+    public:
+      /// Metadata about the detectors
+      SRDetectorMetaBranch meta;
 
-    SRBeamBranch beam;
+      /// Information about the beam configuration and beam pulse for this event
+      SRBeamBranch beam;
 
-    SRTruthBranch mc;
+      /// Truth information
+      SRTruthBranch mc;
 
-    SRCommonRecoBranch common;
+      /// Reconstructed info expected to be common to all (?) detectors
+      SRCommonRecoBranch common;
 
+      /// Reconstructed info unique to the FDs
+      //    SRFDBranch fd;
 
-
-    SRNDBranch nd;
+      /// Reconstructed info unique to the ND complex
+      SRNDBranch nd;
 
   };
   
