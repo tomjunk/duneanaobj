@@ -48,11 +48,6 @@ namespace caf
     SRNDBranch nd;
 
 
-    // sigmas
-    float sigma_Ev_reco;
-    float sigma_Elep_reco;
-    float sigma_numu_pid;
-    float sigma_nue_pid;
 
     int nwgt_CrazyFlux;
     std::vector<float> wgt_CrazyFlux;
