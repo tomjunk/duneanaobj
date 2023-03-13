@@ -13,7 +13,7 @@
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
 #include "duneanaobj/StandardRecord/SRBeamBranch.h"
-#include "duneanaobj/StandardRecord/SRMeta.h"
+#include "duneanaobj/StandardRecord/SRDetectorMetaBranch.h"
 #include "duneanaobj/StandardRecord/SRCommonRecoBranch.h"
 #include "duneanaobj/StandardRecord/SRNDBranch.h"
 #include "duneanaobj/StandardRecord/SRTruthBranch.h"
@@ -29,15 +29,8 @@ namespace caf
   {
     
   public:
-    /// \brief Which detectors does this CAF have info from?
-    /// Use, for example, `detectors[caf::Detector::kND_LAr]` to test if this CAF contains ND-LAr info
-    std::bitset<static_cast<std::size_t>(caf::Detector::_kLastDetector)> active_detectors;
+    SRDetectorMetaBranch meta;
 
-    /// \brief Per-detector metadata.
-    /// There's always one entry for each detector, though any that aren't actually represented in this CAF
-    /// will just contain default (NaN) values (and will be compressed away by ROOT compression in file storage).
-    /// You probably want to check the #active_detectors field before accessing them.
-    std::array<SRDetectorMeta, static_cast<std::size_t>(caf::Detector::_kLastDetector)> meta;
 
     SRTruthBranch mc;
 
