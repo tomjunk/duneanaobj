@@ -1,10 +1,7 @@
 ////////////////////////////////////////////////////////////////////////
-// \file    StandardRecord.h
-// \brief   The StandardRecord is the primary top-level object in the 
-//          Common Analysis File trees.   
-// \version $Id: StandardRecord.h,v 1.7 2012-12-06 20:18:33 rocco Exp $
-// \author  $Author: rocco $
-// \date    $Date: 2012-12-06 20:18:33 $
+/// \file    StandardRecord.h
+/// \brief   The StandardRecord is the primary top-level object in the Common Analysis File trees.
+/// \author  C. Backhouse, C. Marshall, C. Wilkinson, and many others.  Overhauled in early 2023 by J. Wolcott <jwolcott@fnal.gov>
 ////////////////////////////////////////////////////////////////////////
 #ifndef DUNEANAOBJ_STANDARDRECORD_H
 #define DUNEANAOBJ_STANDARDRECORD_H
@@ -32,9 +29,6 @@ namespace caf
   {
     
   public:
-    StandardRecord();
-    ~StandardRecord();
-
     /// \brief Which detectors does this CAF have info from?
     /// Use, for example, `detectors[caf::Detector::kND_LAr]` to test if this CAF contains ND-LAr info
     std::bitset<static_cast<std::size_t>(caf::Detector::_kLastDetector)> active_detectors;
