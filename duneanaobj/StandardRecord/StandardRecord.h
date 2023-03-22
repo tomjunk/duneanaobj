@@ -15,6 +15,7 @@
 #include "duneanaobj/StandardRecord/SRBeamBranch.h"
 #include "duneanaobj/StandardRecord/SRDetectorMetaBranch.h"
 #include "duneanaobj/StandardRecord/SRCommonRecoBranch.h"
+#include "duneanaobj/StandardRecord/SRFDBranch.h"
 #include "duneanaobj/StandardRecord/SRNDBranch.h"
 #include "duneanaobj/StandardRecord/SRTruthBranch.h"
 
@@ -40,7 +41,7 @@ namespace caf
       SRCommonRecoBranch common;
 
       /// Reconstructed info unique to the FDs
-      //    SRFDBranch fd;
+      SRFDBranch fd;
 
       /// Reconstructed info unique to the ND complex
       SRNDBranch nd;
