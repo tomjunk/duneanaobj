@@ -15,7 +15,7 @@ namespace caf
 {
 
   /// GEANT4 creation processes for particles
-  enum g4_process_
+  enum class G4Process
   {
     kG4primary=0,
     kG4CoupledTransportation=1,
@@ -105,8 +105,8 @@ namespace caf
       unsigned int parent;                 ///< GEANT4 trackID of parent particle from this particle
       std::vector<unsigned int> daughters; ///< GEANT4 trackIDs of daughter particles from this particle
 
-      g4_process_   start_process;   ///< GEANT4 process that created this particle (kPrimary means 'came from GENIE')
-      g4_process_   end_process;     ///< End G4 process of the particle
+      G4Process   start_process;   ///< GEANT4 process that created this particle (kPrimary means 'came from GENIE')
+      G4Process   end_process;     ///< End G4 process of the particle
   };
 
 } // caf
