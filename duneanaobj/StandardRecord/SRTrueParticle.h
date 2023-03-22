@@ -6,6 +6,11 @@
 #ifndef DUNEANAOBJ_SRTRUEPARTICLE_H
 #define DUNEANAOBJ_SRTRUEPARTICLE_H
 
+#include <vector>
+
+#include "duneanaobj/StandardRecord/SRLorentzVector.h"
+#include "duneanaobj/StandardRecord/SRVector3D.h"
+
 namespace caf
 {
 
@@ -97,8 +102,8 @@ namespace caf
       SRVector3D      start_pos;        ///< Particle generation position [cm]
       SRVector3D      end_pos;          ///< Particle end position (decay, interaction, stop) [cm]
 
-      unsigned int parent;                 ///< ID's of parent particle from this particle
-      std::vector<unsigned int> daughters; ///< GEANT4 trackID's of daughter particles from this particle
+      unsigned int parent;                 ///< GEANT4 trackID of parent particle from this particle
+      std::vector<unsigned int> daughters; ///< GEANT4 trackIDs of daughter particles from this particle
 
       g4_process_   start_process;   ///< GEANT4 process that created this particle (kPrimary means 'came from GENIE')
       g4_process_   end_process;     ///< End G4 process of the particle
