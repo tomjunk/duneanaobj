@@ -9,7 +9,7 @@
 #define DUNEANAOBJ_SRSHOWER_H
 
 #include "duneanaobj/StandardRecord/SRVector3D.h"
-#include "duneanaobj/StandardRecord/SRParticleTruth.h"
+#include "duneanaobj/StandardRecord/SRTrueParticle.h"
 
 namespace caf
 {
@@ -20,7 +20,7 @@ namespace caf
       SRVector3D direction;  ///< Shower 3D end point
       float Evis = -999.;    ///< Visible energy in voxels corresponding to this shower
 
-      SRParticleTruth truth; ///< Best-match GEANT truth particle for this track
+      SRTrueParticle truth;  ///< Best-match GEANT truth particle for this track
   };
 
 }

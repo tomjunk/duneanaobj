@@ -8,7 +8,7 @@
 #define DUNEANAOBJ_SRTRACK_H
 
 #include "duneanaobj/StandardRecord/SRVector3D.h"
-#include "duneanaobj/StandardRecord/SRParticleTruth.h"
+#include "duneanaobj/StandardRecord/SRTrueParticle.h"
 
 namespace caf
 {
@@ -28,7 +28,7 @@ namespace caf
       float len_cm = -999; ///< Track length in centimeter (actual physical distance)
       float qual = -999; ///< Track quality metric (in TMS, equivalent to "hits in track"/"total hits in event"
 
-      SRParticleTruth truth; ///< Best-match GEANT truth particle for this track
+      SRTrueParticle truth; ///< Best-match GEANT truth particle for this track
   };
 
 }
