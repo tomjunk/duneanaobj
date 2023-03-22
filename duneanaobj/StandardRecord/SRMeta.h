@@ -51,10 +51,10 @@ namespace caf
       /// detector-dependent trigger type for the relevant readout window
       int triggertype = -1;
 
-      unsigned long int readoutstart_s = 0;   ///< GPS time of trigger readout start, seconds part
-      unsigned int readoutstart_ns     = 0;       ///< GPS time of trigger readout start, nanoseconds part
-      unsigned long int readoutend_s   = 0;   ///< GPS time of trigger readout end, seconds part
-      unsigned int readoutend_ns       = 0;       ///< GPS time of trigger readout end, nanoseconds part
+      unsigned long int readoutstart_s   = 0;   ///< GPS time of trigger readout start, seconds part
+      unsigned int      readoutstart_ns  = 0;   ///< GPS time of trigger readout start, nanoseconds part
+      unsigned long int readoutend_s     = 0;   ///< GPS time of trigger readout end, seconds part
+      unsigned int      readoutend_ns    = 0;   ///< GPS time of trigger readout end, nanoseconds part
 
       double prism_offset = std::numeric_limits<double>::signaling_NaN();  ///< For NDs that are part of the PRISM system, where (in meters relative to the beam center) was the detector center located for this run?
 

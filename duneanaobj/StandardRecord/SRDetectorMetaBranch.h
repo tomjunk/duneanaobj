@@ -26,7 +26,7 @@ namespace caf
       SRDetectorMeta fd_hd;    /// Horizontal drift (a.k.a. module 1)
       SRDetectorMeta fd_vd;    /// Vertical drift (a.k.a. module 2)
 
-      // FD prototypes  (we don't have any ProtoDUNE-VD data that will be CAFfed?)
+      // FD prototypes  (add VD ProtoDUNE if/when we CAF it?)
       SRDetectorMeta pd_hd;    /// Horizontal drift prototype
 
   };
