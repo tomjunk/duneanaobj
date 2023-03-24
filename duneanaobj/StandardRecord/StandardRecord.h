@@ -6,10 +6,6 @@
 #ifndef DUNEANAOBJ_STANDARDRECORD_H
 #define DUNEANAOBJ_STANDARDRECORD_H
 
-#include <array>
-#include <bitset>
-#include <vector>
-
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
 #include "duneanaobj/StandardRecord/SRBeamBranch.h"
