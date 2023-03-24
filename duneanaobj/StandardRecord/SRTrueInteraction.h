@@ -8,43 +8,12 @@
 
 #include <limits>
 
+#include "duneanaobj/StandardRecord/SREnums.h"
 #include "duneanaobj/StandardRecord/SRTrueParticle.h"
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
 namespace caf
 {
-   /// Known generators of neutrino interactions (extend as other generators are used)
-   enum class Generator
-   {
-     kUnknownGenerator = 0,
-     kGENIE            = 1,
-     kGIBUU            = 2,
-     kNEUT             = 3
-   };
-
-  /// \brief Neutrino interaction categories.
-  /// These values are taken from nusimdata/SimulationBase/MCNeutrino.h (where
-  /// they are probably copied from some genie header). Duplicating that
-  /// information here is sub-optimal, but less sub-optimal than adding a
-  /// dependency on larsoft to interpret the CAFss.
-  enum class ScatteringMode
-   {
-     kUnknownMode               = -1,
-     kQE                        = 0,
-     kRes                       = 1,
-     kDIS                       = 2,
-     kCoh                       = 3,
-     kCohElastic                = 4,
-     kElectronScattering        = 5,
-     kIMDAnnihilation           = 6,
-     kInverseBetaDecay          = 7,
-     kGlashowResonance          = 8,
-     kAMNuGamma                 = 9,
-     kMEC                       = 10,
-     kDiffractive               = 11,
-     kEM                        = 12,
-     kWeakMix                   = 13
-   };
 
    /// \brief True interaction of probe particle with detector.  Usually neutrinos, but occasionally cosmics etc.
    class SRTrueInteraction

@@ -6,19 +6,12 @@
 #ifndef DUNEANAOBJ_SRRECOPARTICLE_H
 #define DUNEANAOBJ_SRRECOPARTICLE_H
 
+#include "duneanaobj/StandardRecord/SREnums.h"
 #include "duneanaobj/StandardRecord/SRLorentzVector.h"
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
 namespace caf
 {
-  enum class PartEMethod
-  {
-      kUnknown,
-      kRange,
-      kMCS,
-      kCalorimetry,
-  };
-
   /// \brief Reconstructed particle candidate
   class SRRecoParticle
   {
