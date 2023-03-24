@@ -12,6 +12,16 @@
 #include "duneanaobj/StandardRecord/SRTrueParticle.h"
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
+// This is pretty ugly. The proper fix is to get a new version of castxml that
+// is built with at least clang v9.
+// See https://github.com/CastXML/CastXML/issues/178
+#ifndef __castxml__
+#include <string>
+#else
+namespace std{class string{};}
+#endif
+#include <vector>
+
 namespace caf
 {
 
