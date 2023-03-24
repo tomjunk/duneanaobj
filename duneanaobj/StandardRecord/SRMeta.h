@@ -16,7 +16,7 @@ namespace caf
   class SRDetectorMeta
   {
     public:
-      caf::Detector detector = Detector::kUnknown;  ///<   which detector are we describing?
+      caf::Detector detector = Detector::kUnknownDet;  ///<   which detector are we describing?
 
       unsigned int run    = 0;
       unsigned int subrun = 0;
