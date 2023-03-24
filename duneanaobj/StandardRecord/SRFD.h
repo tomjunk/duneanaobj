@@ -8,13 +8,22 @@
 #ifndef DUNEANAOBJ_SRFD_H
 #define DUNEANAOBJ_SRFD_H
 
+#include "duneanaobj/StandardRecord/SRShower.h"
+#include "duneanaobj/StandardRecord/SRTrack.h"
+
 namespace caf
 {
 
   class SRFD
   {
     public:
-      // just a placeholder, for the moment
+      // these are just placeholders.
+      // need to coordinate w/ FD reco folks to put something sensible in here
+      std::vector<SRTrack> tracks;
+      std::size_t          ntracks  = 0;    // these counters used by SRProxy
+
+      std::vector<SRShower> showers;
+      std::size_t           nshowers = 0;
   };
 
 } // caf
