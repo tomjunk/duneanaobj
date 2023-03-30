@@ -16,7 +16,7 @@ namespace caf
   class SRDetectorMeta
   {
     public:
-      caf::Detector detector = Detector::kUnknownDet;  ///<   which detector are we describing?
+      bool enabled = false;     ///< Does this detector have data present in this event?
 
       unsigned int run    = 0;
       unsigned int subrun = 0;
@@ -31,7 +31,10 @@ namespace caf
       unsigned long int readoutend_s     = 0;   ///< GPS time of trigger readout end, seconds part
       unsigned int      readoutend_ns    = 0;   ///< GPS time of trigger readout end, nanoseconds part
 
-      double prism_offset = std::numeric_limits<double>::signaling_NaN();  ///< For NDs that are part of the PRISM system, where (in meters relative to the beam center) was the detector center located for this run?
+      /// For NDs that are part of the PRISM system,
+      /// where (in meters relative to the beam center)
+      /// was the detector center located for this event?
+      double prism_offset = std::numeric_limits<double>::signaling_NaN();
 
   };
 
