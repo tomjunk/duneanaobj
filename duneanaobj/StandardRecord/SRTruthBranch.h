@@ -15,7 +15,8 @@ namespace caf
   class SRTruthBranch
   {
     public:
-      std::vector<SRTrueInteraction> nu;   ///< Vector of true nus, cosmics, etc. contributing to this reco interaction candidate
+      /// Vector of true nus, cosmics, etc. contributing to this reco interaction candidate
+      std::vector<SRTrueInteraction> nu;
       std::size_t nnu = 0;
   };
 
