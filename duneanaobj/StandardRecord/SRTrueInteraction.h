@@ -61,15 +61,9 @@ namespace caf
        float t            = NaN;    ///< Kinematic t
        float baseline     = NaN;    ///< Distance from decay to interaction [m]
 
-       unsigned int npiplus  = 0;   ///< Number of \f$\pi^+\f$'s after neutrino reaction, before FSI
-       unsigned int npiminus = 0;   ///< Number of \f$\pi^1\f$'s after neutrino reaction, before FSI
-       unsigned int npizero  = 0;   ///< Number of \f$\pi^0\f$'s after neutrino reaction, before FSI
-       unsigned int nproton  = 0;   ///< Number of protons after neutrino reaction, before FSI
-       unsigned int nneutron = 0;   ///< Number of neutrons after neutrino reaction, before FSI
-
-       // GTruth stuff
-       bool  ischarm    = false;    ///< Is a charmed quark in interaction
-       bool  isseaquark = false;    ///< Did neutrino scatter off a sea quark
+       // GENIE truth stuff
+       bool  ischarm    = false;    ///< Did neutrino scatter from a charmed quark?
+       bool  isseaquark = false;    ///< Did neutrino scatter from a sea quark?
        int   resnum     = 0;        ///< Resonance number, straight from GENIE
        float xsec       = NaN;      ///< xsec for thrown interaction, in 1/GeV^2, straight from GENIE
 
