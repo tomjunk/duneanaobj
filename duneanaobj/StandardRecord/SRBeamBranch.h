@@ -13,18 +13,22 @@ namespace caf
 {
   class SRBeamBranch
   {
+    private:
+      // save on typing below
+      constexpr static float NaN = std::numeric_limits<float>::signaling_NaN();
+
     public:
       bool                 ismc;      ///< data or simulated beam pulse?
 
-      bool                 isgoodpulse;         ///< Was the pot for a pulse good? (only applicable to data, default true)
-      unsigned long int    pulsetimesec;        ///< pulse time in seconds [s] 
-      unsigned long int    pulsetimensec;       ///< pulse time in nanoseconds [ns]
-      unsigned long int    gpspulsetimesec;     ///< pulse time from GPS [s]
-      unsigned long int    gpspulsetimensec;    ///< pulse time from GPS [ns]
-      signed long long int deltapulsetimensec;  ///< Delta time [ns]
-      float                pulsepot;            ///< POT in pulse including factor of 1e12 so that a user does not have to apply this correction
+      bool                 isgoodpulse         = true;      ///< Was the pot for a pulse good? (only applicable to data)
+      unsigned long int    pulsetimesec        = 0;         ///< pulse time in seconds [s]
+      unsigned long int    pulsetimensec       = 0;         ///< pulse time in nanoseconds [ns]
+      unsigned long int    gpspulsetimesec     = 0;         ///< pulse time from GPS [s]
+      unsigned long int    gpspulsetimensec    = 0;         ///< pulse time from GPS [ns]
+      signed long long int deltapulsetimensec  = -9999999;  ///< Delta time [ns]
+      float                pulsepot            = NaN;       ///< POT in pulse including factor of 1e12 so that a user does not have to apply this correction
+      float                hornI               = NaN;       ///< Horn current [kA]
 
-      float                hornI = std::numeric_limits<float>::signaling_NaN();  ///< Horn current [kA]
       bool isFHC() const  { return hornI > 0; };                                 ///< Checks #hornI to see if the polarity is positive --> this is FHC
       bool is0HC() const  { return std::abs(hornI) < 1; };                       ///< Checks #hornI to see if the polarity is zero
       bool isRHC() const  { return hornI < 0; }                                  ///< Checks #hornI to see if the polarity is negative --> this is RHC
