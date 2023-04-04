@@ -40,7 +40,7 @@ namespace caf
       std::vector<float> pid_prob_B; ///< PID probability vector in backward fit
 
       SRParticleTruth truth; ///< Best-match GEANT truth particle for this track
-      float truth_fraction;  ///< 
+      float truth_fraction;  ///< Contribution of truth particle to reco object
   };
 
 }
