@@ -59,9 +59,6 @@ namespace caf
 
     SRNDBranch nd;
 
-    char  target;  //A (for Ar)  or C or H   added by LDN
-    char  reco_target;
-	
     int RecoMethodNue;  // 1 = longest reco track + hadronic, 2 = reco shower with highest charge + hadronic, 3 = all hit charges, -1 = not set
     int RecoMethodNumu; // 1 = longest reco track + hadronic, 2 = reco shower with highest charge + hadronic, 3 = all hit charges, -1 = not set
     int TrackMomMethodNumu;

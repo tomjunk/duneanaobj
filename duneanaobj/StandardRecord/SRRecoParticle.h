@@ -2,7 +2,7 @@
 /// \file    SRRecoParticle.h
 /// \brief   information for a reco particle
 /// \author  L. Di Noto
-/// \date    Jan. 2023
+/// \date    Apr. 2023
 ////////////////////////////////////////////////////////////////////////
 
 #ifndef DUNEANAOBJ_SRRECOPARTICLE_H
@@ -17,21 +17,14 @@ namespace caf
   {
     public:
 
-      int primary=0;              //1 if primary, 0 otherwise
-      int   reco_trkid     = 0;   //trackid of reco particle
+      bool  IsPrimary=false;      //Primary Particle is a particle coming out from neutrino vertex 
       int   pdg       = 0;   // PDG Code of the reco particle
-      int   mother_trkid = 0;   //  trackid of the mother accordingly to the reco
 
-      int trkid_best_match;           //track id of the best match
-      SRParticleTruth particle_true; //Particle best match
+      SRParticleTruth particle_true; //True particle association
 
       SRLorentzVector p;       ///< Reco energy 4-vector 
       SRVector3D      start;   ///< Reco start point of the  particle in detector coordinates (cm)
 	
-      //to be added if necessary
-      //SRTrack         track_p;     //associated track
-      //SRShower        shower_p;    //associated shower
-
   };
 }
 
