@@ -12,8 +12,8 @@
 
 namespace caf
 {
-  /// ND-GAr reconstruction output
-  class SRGAr
+  /// An ND-GAr reconstructed neutrino interaction
+  class SRGArInt
   {
     public:
       // for the moment, these "pseudo-reco" fields are just copied from the old ND_CAFMaker branches.
@@ -27,6 +27,21 @@ namespace caf
       std::vector<float> partEvReco;
       int gastpc_pi_pl_mult;
       int gastpc_pi_min_mult;
+  };
+
+  /// ND-GAr reconstruction output
+  class SRGAr
+  {
+    public:
+      /// The information needed to uniquely identify a TMS reco object
+      struct ID
+      {
+        int        ixn  = -1;            ///< interaction ID
+        int        idx  = -1;            ///< index in container
+      };
+
+      std::size_t nixn = 0;
+      std::vector<SRGArInt> ixn;       ///< Reconstructed interactions
   };
 
 }
