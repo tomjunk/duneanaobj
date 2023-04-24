@@ -13,8 +13,8 @@
 
 namespace caf
 {
-
-  class SRFD
+  /// A FD reconstructed neutrino interaction
+  class SRFDInt
   {
     public:
       // these are just placeholders.
@@ -24,6 +24,29 @@ namespace caf
 
       std::vector<SRShower> showers;
       std::size_t           nshowers = 0;
+  };
+
+  class SRFD
+  {
+    public:
+       enum RECO_STACK { kUnknownReco, kPandora };
+
+      /// The information needed to uniquely identify a FD reco object
+      struct ID
+      {
+        RECO_STACK reco = kUnknownReco;  ///< reco stack
+        int        ixn  = -1;            ///< interaction ID
+        int        idx  = -1;            ///< index in container
+      };
+
+      std::vector<SRFDInt> pandora;       ///< Reconstructed interactions
+      std::size_t npandora = 0;
+
+      /// Convenience function:
+      /// Given a specific reco pathway (specified with a SRFD::RECO_STACK value),
+      /// an interaction index, and a track index, return the associated reco object
+      template <typename T>
+      const T & Reco(const SRFD::ID& id);
   };
 
 } // caf
