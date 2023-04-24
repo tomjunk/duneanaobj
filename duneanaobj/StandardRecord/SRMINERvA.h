@@ -13,13 +13,34 @@
 
 namespace caf
 {
+  /// A MINERvA reconstructed interaction
+  class SRMINERvAInt
+  {
+    public:
+      std::vector<caf::SRTrack> tracks;
+      std::size_t               ntracks  = 0;
+  };
 
   // just a placeholder for the moment
   class SRMINERvA
   {
     public:
-      std::vector<SRTrack> tracks;
-      std::size_t          ntracks  = 0;
+      /// The information needed to uniquely identify a TMS reco object
+      struct ID
+      {
+        int        ixn  = -1;            ///< interaction ID
+        int        idx  = -1;            ///< index in container
+      };
+
+      std::vector<SRMINERvAInt> ixn;       ///< Reconstructed interactions
+      std::size_t nixn = 0;
+
+      /// Convenience function for use mainly with SRNDTrackAssn.
+      /// Given an interaction index and a track index, return the associated reco object
+      const SRTrack & Track(const SRMINERvA::ID& id)
+      {
+        return ixn[id.ixn].tracks[id.idx];
+      }
   };
 
 } // caf
