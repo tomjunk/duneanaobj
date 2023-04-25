@@ -11,7 +11,7 @@
 #include "duneanaobj/StandardRecord/SRGAr.h"
 #include "duneanaobj/StandardRecord/SRNDLAr.h"
 #include "duneanaobj/StandardRecord/SRMINERvA.h"
-#include "duneanaobj/StandardRecord/SRNDTrackAssn.h"
+#include "duneanaobj/StandardRecord/SRNDAssnBranch.h"
 #include "duneanaobj/StandardRecord/SRSAND.h"
 #include "duneanaobj/StandardRecord/SRTMS.h"
 
@@ -29,7 +29,8 @@ namespace caf
       /// with 2x2 prototype in NuMI beam
       SRMINERvA minerva;
 
-      caf::SRNDAssnBranch trkmatch;
+      caf::SRNDTrkAssnBranch trkmatch;
+      caf::SRNDShwAssnBranch shwmatch;
   };
 }
 

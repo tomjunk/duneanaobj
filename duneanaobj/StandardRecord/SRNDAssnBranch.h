@@ -7,16 +7,25 @@
 
 #include <vector>
 
+#include "duneanaobj/StandardRecord/SRNDShowerAssn.h"
 #include "duneanaobj/StandardRecord/SRNDTrackAssn.h"
 
 namespace caf
 {
-  class SRNDAssnBranch
+  class SRNDTrkAssnBranch
   {
     public:
       std::size_t nextrap = 0;
       std::vector<SRNDTrackAssn> extrap;  ///<  Associations made using extrapolation of track dirs
   };
+
+  class SRNDShwAssnBranch
+  {
+    public:
+      std::size_t nextrap = 0;
+      std::vector<SRNDShowerAssn> extrap;  ///<  Associations made using extrapolation of track dirs
+  };
+
 }
 
 #endif //DUNEANAOBJ_SRNDASSNBRANCH_H
