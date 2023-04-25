@@ -21,9 +21,9 @@ namespace caf
 
       int hits_in_cluster = -999; ///< Total number of ECAL hits in cluster
 
-      int ecal_id = -999;  ///< GArSoft ECALId for ECAL cluster
+      int garsoft_ecal_id = -999;  ///< GArSoft ECALId for ECAL cluster
 
-      int trk_assn = -999; ///< GArSoft trackId associated to ECAL cluster
+      int garsoft_trk_assn = -999; ///< GArSoft trackId associated to ECAL cluster
 
       SRParticleTruth truth; ///< Best-match GEANT truth particle for this ECAL cluster
       float truth_fraction;  ///< Contribution of truth particle to reco object

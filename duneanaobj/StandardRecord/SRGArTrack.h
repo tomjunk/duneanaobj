@@ -32,7 +32,7 @@ namespace caf
 
       int clusters_in_track = -999; ///< Total number of TPC clusters in track
 
-      int trk_id = -999;  ///< GArSoft trackId for track
+      int garsoft_trk_id = -999;  ///< GArSoft trackId for track
 
       std::vector<int> pid_fwd;         ///< PID of track in forward fit
       std::vector<float> pid_prob_fwd;  ///< PID probability vector in forward fit
