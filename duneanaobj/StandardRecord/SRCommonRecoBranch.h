@@ -6,10 +6,7 @@
 #ifndef DUNEANAOBJ_SRCOMMONRECOBRANCH_H
 #define DUNEANAOBJ_SRCOMMONRECOBRANCH_H
 
-#include "duneanaobj/StandardRecord/SRNeutrinoEnergyBranch.h"
-#include "duneanaobj/StandardRecord/SRNeutrinoHypothesisBranch.h"
-#include "duneanaobj/StandardRecord/SRRecoParticlesBranch.h"
-#include "duneanaobj/StandardRecord/SRVertexBranch.h"
+#include "duneanaobj/StandardRecord/SRInteractionBranch.h"
 
 
 namespace caf
@@ -19,17 +16,7 @@ namespace caf
   class SRCommonRecoBranch
   {
     public:
-      /// Hypotheses for this neutrino interaction's identity
-      SRNeutrinoHypothesisBranch nuhyp;
-
-      /// Hypotheses for this neutrino interaction's energy
-      SRNeutrinoEnergyBranch Enu;
-
-      /// Reconstructed vertex location
-      SRVertexBranch vtx;
-
-      /// Collections of reconstructed particles
-      SRRecoParticlesBranch part;
+      SRInteractionBranch ixn;
   };
 
 } // caf
