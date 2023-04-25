@@ -7,20 +7,15 @@
 #ifndef DUNEANAOBJ_SRGARTRACK_H
 #define DUNEANAOBJ_SRGARTRACK_H
 
-#include "duneanaobj/StandardRecord/SRVector3D.h"
-#include "duneanaobj/StandardRecord/SRParticleTruth.h"
+#include "duneanaobj/StandardRecord/SRTrack.h"
 
 namespace caf
 {
-  class SRGArTrack
+  class SRGArTrack: public SRTrack
   {
     public:
-      SRVector3D start;      ///< Track 3D start point
-      SRVector3D end;        ///< Track 3D end point
-      SRVector3D dir;        ///< Unit vector representing estimate of track direction *taken from start point*
-      SRVector3D enddir;     ///< Unit vector representing estimate of track direction *taken from endpoint*
 
-      // Track characteristics
+      // GAr track characteristics
       float dEdx_fwd = -999.;   ///< dE/dx of track in forward fit
       float dEdx_bkwd = -999.;  ///< dE/dx of track in backward fit
 
@@ -39,7 +34,6 @@ namespace caf
       std::vector<int> pid_bkwd;        ///< PID of track in backward fit
       std::vector<float> pid_prob_bkwd; ///< PID probability vector in backward fit
 
-      SRParticleTruth truth; ///< Best-match GEANT truth particle for this track
       float truth_fraction;  ///< Contribution of truth particle to reco object
   };
 
