@@ -8,19 +8,19 @@
 #ifndef DUNEANAOBJ_SRSHOWER_H
 #define DUNEANAOBJ_SRSHOWER_H
 
+#include "duneanaobj/StandardRecord/SRRecoObjBase.h"
 #include "duneanaobj/StandardRecord/SRVector3D.h"
-#include "duneanaobj/StandardRecord/SRTrueParticle.h"
 
 namespace caf
 {
-  class SRShower
+  class SRShower : public SRRecoObjBase
   {
     public:
       SRVector3D start;      ///< Shower 3D start point [cm]
       SRVector3D direction;  ///< Shower 3D end point [cm]
       float Evis = -999.;    ///< Visible energy in voxels corresponding to this shower
 
-      SRTrueParticle truth;  ///< Best-match GEANT truth particle for this track
+      SRTrueParticle truth;  ///< Best-match GEANT truth particle for this shower
   };
 
 }

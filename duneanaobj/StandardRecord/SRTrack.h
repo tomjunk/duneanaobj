@@ -7,12 +7,12 @@
 #ifndef DUNEANAOBJ_SRTRACK_H
 #define DUNEANAOBJ_SRTRACK_H
 
+#include "duneanaobj/StandardRecord/SRRecoObjBase.h"
 #include "duneanaobj/StandardRecord/SRVector3D.h"
-#include "duneanaobj/StandardRecord/SRTrueParticle.h"
 
 namespace caf
 {
-  class SRTrack
+  class SRTrack : public SRRecoObjBase
   {
     public:
       // less typing further below
