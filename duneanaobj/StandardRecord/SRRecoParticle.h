@@ -23,6 +23,7 @@ namespace caf
       static constexpr int kPdgHadronicBlob = 2000000002;   ///< Special PDG code used for a "hadronic blob" (usu. calorimetrically reconstructed), borrowed from GENIE
 
       int         pdg      = 0;                       ///< PDG code inferred for this particle.
+      int         tgtA     = 0;                       ///< Atomic number of nucleus this particle was reconstructed in (useful for, e.g., SAND)
 
       float       score    = NaN;                     ///< PID score for this particle, if relevant
 
