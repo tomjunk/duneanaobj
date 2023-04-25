@@ -81,10 +81,12 @@ namespace caf
        std::vector<unsigned int>   genVersion;                                ///< Version of the generator that created this neutrino interaction
        std::string                 genConfigString;                           ///< String associated with generator configuration. (For GENIE 3+, this is the "Comprehensive Model Configuration".)
 
-       int                         nprim = 0;        ///< Number of primary daughters
-       std::vector<SRTrueParticle> prim;             ///< Primary daughters.  The lepton always comes first in this vector.
-       int                         nprefsi = 0;      ///< How many primary daughters there were prior to FSI
-       std::vector<SRTrueParticle> prefsi;           ///< Primary daughters prior to FSI.
+       int                         nprim = 0;        ///< Number of primary particles (helps SRProxy)
+       std::vector<SRTrueParticle> prim;             ///< Primary p.  The lepton always comes first in this vector.
+       int                         nprefsi = 0;      ///< How many primary particles there were prior to FSI (helps SRProxy)
+       std::vector<SRTrueParticle> prefsi;           ///< Primary particles prior to FSI.
+       int                         nsec = 0;         ///< How many secondaries are in this vector? (helps SRProxy)
+       std::vector<SRTrueParticle> sec;              ///< Secondary particles.  Note that not *all* secondaries are kept, only those used in the reco branches
 
        float                       xsec_cvwgt = NaN; ///<  Central value weight for cross section model
 
