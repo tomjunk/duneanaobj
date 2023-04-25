@@ -7,6 +7,7 @@
 #define DUNEANAOBJ_SRRECOPARTICLE_H
 
 #include "duneanaobj/StandardRecord/SREnums.h"
+#include "duneanaobj/StandardRecord/SRTrueParticle.h"
 #include "duneanaobj/StandardRecord/SRLorentzVector.h"
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
@@ -39,6 +40,8 @@ namespace caf
       // todo: would we prefer some kind of "extents" thing so that we can make a decision about containment later?
       //       or should this be the responsibility of the reco module?  (what about stuff that crosses detector boundaries?...)
       bool        contained = false;
+
+      SRTrueParticle::ID truth;                       ///< Associated SRTrueParticle, if relevant (use SRTruthBranch::Particle() with this ID to grab it)
   };
 
 } // caf
