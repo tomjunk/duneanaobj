@@ -13,6 +13,8 @@
 
 namespace caf
 {
+  class SRRecoObjBase;
+
   /// \brief Reconstructed particle candidate
   class SRRecoParticle
   {
@@ -40,6 +42,8 @@ namespace caf
       // todo: would we prefer some kind of "extents" thing so that we can make a decision about containment later?
       //       or should this be the responsibility of the reco module?  (what about stuff that crosses detector boundaries?...)
       bool        contained = false;
+
+      const SRRecoObjBase * base = nullptr;           ///< Base (detector-specific) reco object this SRRecoParticle was made from.
 
       TrueParticleID truth;                       ///< Associated SRTrueParticle, if relevant (use SRTruthBranch::Particle() with this ID to grab it)
   };
