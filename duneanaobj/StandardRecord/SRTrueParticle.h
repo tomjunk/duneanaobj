@@ -40,6 +40,8 @@ namespace caf
       int      interaction_id  = -1;    ///< True interaction ID of the source of this particle
       float    time            = NaN;   ///< Generation time at true interaction vertex [ns]
 
+      ID       ancestor_id;             ///< The primary particle this particle descended from, if relevant
+
       SRLorentzVector p;                ///< Momentum at generation point [GeV/c]
       SRVector3D      start_pos;        ///< Particle generation position [cm]
       SRVector3D      end_pos;          ///< Particle end position (decay, interaction, stop) [cm]
