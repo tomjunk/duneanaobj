@@ -20,6 +20,16 @@ namespace caf
   ///  but occasionally we want info about other intermediaries as well)
   class SRTrueParticle
   {
+    public:
+      struct ID
+      {
+        enum PartType { kUnknown, kPrimary, kPrimaryBeforeFSI, kSecondary };
+
+        int      ixn  = -1;       ///< Index of SRInteraction in the SRTruthBranch
+        PartType type = kUnknown; ///< Which of the particle collections this particle lives in
+        int      part = -1;       ///< Index of SRParticle in the SRInteraction
+      };
+
     private:
       // just to keep the typing under control below
       static constexpr float NaN = std::numeric_limits<float>::signaling_NaN();

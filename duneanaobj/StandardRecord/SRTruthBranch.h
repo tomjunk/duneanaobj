@@ -8,6 +8,7 @@
 #define DUNEANAOBJ_SRTRUTHBRANCH_H
 
 #include "duneanaobj/StandardRecord/SRTrueInteraction.h"
+#include "duneanaobj/StandardRecord/SRTrueParticle.h"
 
 namespace caf
 {
@@ -18,6 +19,9 @@ namespace caf
       /// Vector of true nus, cosmics, etc. contributing to this reco interaction candidate
       std::vector<SRTrueInteraction> nu;
       std::size_t nnu = 0;
+
+      /// Convenience method to find a  particle stored by its ID easily
+      const SRTrueParticle & Particle(const SRTrueParticle::ID & id) const;
   };
 
 } // caf
