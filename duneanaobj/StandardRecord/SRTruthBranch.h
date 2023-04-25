@@ -21,7 +21,7 @@ namespace caf
       std::size_t nnu = 0;
 
       /// Convenience method to find a  particle stored by its ID easily
-      const SRTrueParticle & Particle(const SRTrueParticle::ID & id) const;
+      const SRTrueParticle * Particle(const SRTrueParticle::ID & id) const;
   };
 
 } // caf
