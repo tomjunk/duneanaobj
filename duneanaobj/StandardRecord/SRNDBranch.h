@@ -29,8 +29,7 @@ namespace caf
       /// with 2x2 prototype in NuMI beam
       SRMINERvA minerva;
 
-      std::size_t ntrkmatch = 0;
-      std::vector<caf::SRNDTrackAssn> trkmatch;
+      caf::SRNDAssnBranch trkmatch;
   };
 }
 
