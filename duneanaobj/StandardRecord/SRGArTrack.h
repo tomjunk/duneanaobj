@@ -34,10 +34,10 @@ namespace caf
 
       int trk_id = -999;  ///< GArSoft trackId for track
 
-      std::vector<int> pid_F;      ///< PID of track in forward fit
-      std::vector<float> pid_prob_F; ///< PID probability vector in forward fit
-      std::vector<int> pid_B;      ///< PID of track in backward fit
-      std::vector<float> pid_prob_B; ///< PID probability vector in backward fit
+      std::vector<int> pid_fwd;      ///< PID of track in forward fit
+      std::vector<float> pid_prob_fwd; ///< PID probability vector in forward fit
+      std::vector<int> pid_bkwd;      ///< PID of track in backward fit
+      std::vector<float> pid_prob_bkwd; ///< PID probability vector in backward fit
 
       SRParticleTruth truth; ///< Best-match GEANT truth particle for this track
       float truth_fraction;  ///< Contribution of truth particle to reco object
