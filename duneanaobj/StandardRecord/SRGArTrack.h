@@ -21,14 +21,14 @@ namespace caf
       SRVector3D enddir;     ///< Unit vector representing estimate of track direction *taken from endpoint*
 
       // Track characteristics
-      float dEdx_F = -999.;  ///< dE/dx of track in forward fit
-      float dEdx_B = -999.;  ///< dE/dx of track in backward fit
+      float dEdx_fwd = -999.;  ///< dE/dx of track in forward fit
+      float dEdx_bkwd = -999.;  ///< dE/dx of track in backward fit
 
-      float p_F = -999.;     ///< Reco momentum of track in forward fit
-      float p_B = -999.;     ///< Reco momentum of track in forward fit
+      float p_fwd = -999.;     ///< Reco momentum of track in forward fit
+      float p__bkwd = -999.;     ///< Reco momentum of track in forward fit
 
-      float len_cm_F = -999.; ///< Length of track in forward fit
-      float len_cm_B = -999.; ///< Length of track in backward fit
+      float len_cm_fwd  = -999.; ///< Length of track in forward fit
+      float len_cm__bkwd = -999.; ///< Length of track in backward fit
 
       int clusters_in_track = -999; ///< Total number of TPC clusters in track
 
