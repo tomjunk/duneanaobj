@@ -10,6 +10,7 @@
 
 #include <vector>
 #include "duneanaobj/StandardRecord/SRTrack.h"
+#include "duneanaobj/StandardRecord/SRShower.h"
 
 namespace caf
 {
@@ -19,6 +20,10 @@ namespace caf
     public:
       std::vector<caf::SRTrack> tracks;
       std::size_t               ntracks  = 0;
+
+      // I think this is where MINERvA "blobs" should go?
+      std::vector<caf::SRShower> showers;
+      std::size_t                nshowers  = 0;
   };
 
   // just a placeholder for the moment
@@ -35,12 +40,10 @@ namespace caf
       std::vector<SRMINERvAInt> ixn;       ///< Reconstructed interactions
       std::size_t nixn = 0;
 
-      /// Convenience function for use mainly with SRNDTrackAssn.
-      /// Given an interaction index and a track index, return the associated reco object
-      const SRTrack & Track(const SRMINERvA::ID& id)
-      {
-        return ixn[id.ixn].tracks[id.idx];
-      }
+      /// Convenience function for use mainly with SRNDTrackAssn and SRNDShowerAssn.
+      /// Given an interaction index and object index, return the associated reco object
+      template <typename T>
+      const T & Reco(const SRMINERvA::ID& id);
   };
 
 } // caf

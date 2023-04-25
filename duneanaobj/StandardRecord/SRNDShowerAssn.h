@@ -5,17 +5,21 @@
 #define DUNEANAOBJ_SRNDSHOWERASSN_H
 
 #include "duneanaobj/StandardRecord/SRShower.h"
-
+#include "duneanaobj/StandardRecord/SRNDLAr.h"
+#include "duneanaobj/StandardRecord/SRTMS.h"
+#include "duneanaobj/StandardRecord/SRMINERvA.h"
+#include "duneanaobj/StandardRecord/SRGAr.h"
 namespace caf
 {
   class SRNDShowerAssn
   {
     public:
-      int larid         = -1;        ///< index of ND-LAr track
-      int tmsid         = -1;        ///< index of TMS track
-      int minervaid     = -1;        ///< index of MINERvA track
+      // note: no TMS or GAr right now since we don't have anything to connect to ND-LAr,
+      // but the pattern is straightforward to extend if those become useful
+      SRNDLAr::ID   larid;      ///< ND-LAr shower identifier.  Get the actual SRShower object using SRNDLAr::Reco<Shower>() with this ID, e.g.`sr.nd.lar.Reco<Shower>(sr.nd.shwmatch.extrap[1].larid)`
+      SRMINERvA::ID minervaid;  ///< MINERvA shower identifier.
 
-      SRShower shw;                  ///< new shower object generated from synthesis of matched parts
+      SRShower shw;             ///< new shower object generated from synthesis of matched parts
   };
 }
 
