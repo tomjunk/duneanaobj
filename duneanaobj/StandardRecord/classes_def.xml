@@ -70,14 +70,14 @@
   </class>
 
   <class name="caf::SRGArTrack" ClassVersion="11">
-   <version ClassVersion="11" checksum="341358079"/>
+   <version ClassVersion="11" checksum="2689178119"/>
    <version ClassVersion="10" checksum="4044067765"/>
   </class>
   <class name="std::vector<caf::SRGArTrack>">
   </class>
 
   <class name="caf::SRGArECAL" ClassVersion="11">
-  <version ClassVersion="11" checksum="2202249478"/>
+   <version ClassVersion="11" checksum="2202249478"/>
    <version ClassVersion="10" checksum="4277816864"/>
   </class>
   <class name="std::vector<caf::SRGArECAL>">
