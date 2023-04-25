@@ -15,6 +15,7 @@ namespace caf
       int tmsid         = -1;        ///< index of TMS track
       int minervaid     = -1;        ///< index of MINERvA track
 
+      SRShower shw;                  ///< new shower object generated from synthesis of matched parts
   };
 }
 

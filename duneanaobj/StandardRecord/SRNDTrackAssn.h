@@ -15,6 +15,8 @@ namespace caf
       int minervaid     = -1;        ///< index of MINERvA track
       float transdispl  = -999.;     ///< perpendicular distance between the two tracks at longitudinal position of matching point
       float angdispl    = -999.;     ///< angular difference between the two tracks at longitudinal position of matching point
+
+      SRTrack trk;                   ///< new track object generated from synthesis of matched parts
   };
 }
 
