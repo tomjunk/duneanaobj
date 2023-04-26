@@ -7,7 +7,6 @@
 #define DUNEANAOBJ_SRRECOPARTICLE_H
 
 #include "duneanaobj/StandardRecord/SREnums.h"
-#include "duneanaobj/StandardRecord/SRTrueParticle.h"
 #include "duneanaobj/StandardRecord/SRLorentzVector.h"
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
@@ -41,7 +40,7 @@ namespace caf
       //       or should this be the responsibility of the reco module?  (what about stuff that crosses detector boundaries?...)
       bool        contained = false;
 
-      SRTrueParticle::ID truth;                       ///< Associated SRTrueParticle, if relevant (use SRTruthBranch::Particle() with this ID to grab it)
+      TrueParticleID truth;                       ///< Associated SRTrueParticle, if relevant (use SRTruthBranch::Particle() with this ID to grab it)
   };
 
 } // caf

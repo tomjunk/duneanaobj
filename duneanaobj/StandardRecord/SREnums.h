@@ -151,6 +151,18 @@ namespace caf
     kWeakMix                   = 13
   };
 
+  // ----------------------------------------------------------------------
+  // now some enums that are used internally so one branch can easily refer to another
+
+    struct TrueParticleID
+    {
+        enum PartType { kUnknown, kPrimary, kPrimaryBeforeFSI, kSecondary };
+
+        int      ixn  = -1;       ///< Index of SRInteraction in the SRTruthBranch
+        PartType type = kUnknown; ///< Which of the particle collections this particle lives in
+        int      part = -1;       ///< Index of SRParticle in the SRInteraction
+    };
+
 }
 
 

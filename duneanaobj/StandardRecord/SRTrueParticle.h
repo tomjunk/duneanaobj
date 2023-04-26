@@ -20,16 +20,6 @@ namespace caf
   ///  but occasionally we want info about other intermediaries as well)
   class SRTrueParticle
   {
-    public:
-      struct ID
-      {
-        enum PartType { kUnknown, kPrimary, kPrimaryBeforeFSI, kSecondary };
-
-        int      ixn  = -1;       ///< Index of SRInteraction in the SRTruthBranch
-        PartType type = kUnknown; ///< Which of the particle collections this particle lives in
-        int      part = -1;       ///< Index of SRParticle in the SRInteraction
-      };
-
     private:
       // just to keep the typing under control below
       static constexpr float NaN = std::numeric_limits<float>::signaling_NaN();
@@ -40,7 +30,7 @@ namespace caf
       int      interaction_id  = -1;    ///< True interaction ID of the source of this particle
       float    time            = NaN;   ///< Generation time at true interaction vertex [ns]
 
-      ID       ancestor_id;             ///< The primary particle this particle descended from, if relevant
+      TrueParticleID  ancestor_id;      ///< The primary particle this particle descended from, if relevant
 
       SRLorentzVector p;                ///< Momentum at generation point [GeV/c]
       SRVector3D      start_pos;        ///< Particle generation position [cm]
