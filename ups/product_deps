@@ -33,7 +33,7 @@ bindir  fq_dir       bin
 product             version       optional
 cetbuildtools  v8_20_00 - only_for_build
 root                v6_26_06a
-srproxy             v00.41
+srproxy             v00.42
 end_product_list
 
 # We now define allowed qualifiers and the corresponding qualifiers for the dependencies.
