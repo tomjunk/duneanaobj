@@ -6,6 +6,7 @@
 #ifndef DUNEANAOBJ_SRINTERACTION_H
 #define DUNEANAOBJ_SRINTERACTION_H
 
+#include "duneanaobj/StandardRecord/SRDirectionBranch.h"
 #include "duneanaobj/StandardRecord/SRNeutrinoEnergyBranch.h"
 #include "duneanaobj/StandardRecord/SRNeutrinoHypothesisBranch.h"
 #include "duneanaobj/StandardRecord/SRRecoParticlesBranch.h"
@@ -19,6 +20,9 @@ namespace caf
     public:
       /// Reconstructed vertex location (if any)
       SRVector3D vtx;
+
+      /// Hypotheses for this interaction's parent particle direction
+      SRDirectionBranch dir;
 
       /// Hypotheses for this interaction's neutrino identity
       SRNeutrinoHypothesisBranch nuhyp;
