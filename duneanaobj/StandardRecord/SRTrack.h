@@ -18,8 +18,8 @@ namespace caf
       // less typing further below
       static constexpr float NaN = std::numeric_limits<float>::signaling_NaN();
 
-      SRVector3D start;      ///< Track 3D start point
-      SRVector3D end;        ///< Track 3D end point
+      SRVector3D start;      ///< Track 3D start point [cm]
+      SRVector3D end;        ///< Track 3D end point [cm]
       SRVector3D dir;        ///< Unit vector representing estimate of track direction *taken from start point*
       SRVector3D enddir;     ///< Unit vector representing estimate of track direction *taken from endpoint*
 
