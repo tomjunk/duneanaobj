@@ -42,7 +42,8 @@
    <version ClassVersion="10" checksum="175116589"/>
   </class>
 
-  <class name="caf::SRDetectorMeta" ClassVersion="10">
+  <class name="caf::SRDetectorMeta" ClassVersion="11">
+   <version ClassVersion="11" checksum="810717581"/>
    <version ClassVersion="10" checksum="2557124789"/>
   </class>
 
@@ -75,9 +76,13 @@
    <version ClassVersion="10" checksum="684361603"/>
   </class>
 
-  <class name="caf::SRRecoParticle" ClassVersion="11">
+  <class name="caf::SRRecoParticle" ClassVersion="13">
+   <version ClassVersion="13" checksum="2634132066"/>
+   <version ClassVersion="12" checksum="223390088"/>
    <version ClassVersion="11" checksum="1827982951"/>
    <version ClassVersion="10" checksum="2885167555"/>
+  </class>
+
   <class name="std::vector<caf::SRRecoParticle>">
   </class>
 
@@ -85,7 +90,9 @@
 
   <!-- - - - - - - - Types used in det-specific situations - - - - -->
 
-  <class name="caf::SRTrack" ClassVersion="14">
+  <class name="caf::SRTrack" ClassVersion="16">
+   <version ClassVersion="16" checksum="3368125268"/>
+   <version ClassVersion="15" checksum="0"/>
    <version ClassVersion="14" checksum="514514930"/>
     <version ClassVersion="13" checksum="1538684939"/>
     <version ClassVersion="12" checksum="1834229612"/>
@@ -96,7 +103,9 @@
   <class name="std::vector<caf::SRTrack>">
   </class>
 
-  <class name="caf::SRShower" ClassVersion="11">
+  <class name="caf::SRShower" ClassVersion="13">
+   <version ClassVersion="13" checksum="749498947"/>
+   <version ClassVersion="12" checksum="0"/>
    <version ClassVersion="11" checksum="749498947"/>
     <version ClassVersion="10" checksum="2243636990"/>
   </class>
@@ -118,7 +127,8 @@
 
   <!-- - - - - - - - - - ND specific - - - - - - - - - - - - - - - -->
 
-  <class name="caf::SRNDBranch" ClassVersion="14">
+  <class name="caf::SRNDBranch" ClassVersion="15">
+   <version ClassVersion="15" checksum="726502342"/>
    <version ClassVersion="14" checksum="2431680929"/>
    <version ClassVersion="13" checksum="688841544"/>
    <version ClassVersion="12" checksum="2431680929"/>
@@ -126,7 +136,9 @@
    <version ClassVersion="10" checksum="2431680929"/>
   </class>
 
-  <class name="caf::SRNDTrackAssn" ClassVersion="10">
+  <class name="caf::SRNDTrackAssn" ClassVersion="12">
+   <version ClassVersion="12" checksum="3802670637"/>
+   <version ClassVersion="11" checksum="0"/>
     <version ClassVersion="10" checksum="884165698"/>
   </class>
   <class name="std::vector<caf::SRNDTrackAssn>">
@@ -174,11 +186,13 @@
    <version ClassVersion="10" checksum="2608785459"/>
   </class>
 
-  <class name="caf::SRTrueInteraction" ClassVersion="10">
+  <class name="caf::SRTrueInteraction" ClassVersion="11">
+   <version ClassVersion="11" checksum="1216771862"/>
    <version ClassVersion="10" checksum="1298199261"/>
   </class>
 
-  <class name="caf::SRTrueParticle" ClassVersion="11">
+  <class name="caf::SRTrueParticle" ClassVersion="12">
+   <version ClassVersion="12" checksum="941873740"/>
    <version ClassVersion="11" checksum="4112437168"/>
     <version ClassVersion="10" checksum="3381095522"/>
   </class>
