@@ -21,6 +21,9 @@ namespace caf
 
       int npandora = 0;
       std::vector<SRRecoParticle> pandora;   ///< Particles reconstructed by Pandora
+
+      int npida = 0;
+      std::vector<SRRecoParticle> pida;      ///< Particles bearing weights from PIDA algorithm
   };
 
 } // caf
