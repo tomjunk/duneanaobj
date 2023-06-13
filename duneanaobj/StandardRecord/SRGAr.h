@@ -7,8 +7,8 @@
 #ifndef DUNEANAOBJ_SRGAR_H
 #define DUNEANAOBJ_SRGAR_H
 
-#include "duneanaobj/StandardRecord/SRTrack.h"
-#include "duneanaobj/StandardRecord/SRShower.h"
+#include "duneanaobj/StandardRecord/SRGArTrack.h"
+#include "duneanaobj/StandardRecord/SRGArECAL.h"
 
 namespace caf
 {
@@ -16,8 +16,13 @@ namespace caf
   class SRGArInt
   {
     public:
-      // for the moment, these "pseudo-reco" fields are just copied from the old ND_CAFMaker branches.
-      // once GAr reco is integrated they should be replaced with proper reco
+      std::vector<SRGArTrack> tracks;
+      std::size_t             ntracks  = 0;
+
+      std::vector<SRGArECAL> clusters;
+      std::size_t            nclusters = 0;
+
+      // legacy parametric reco fields
 
       int nFSP;
       std::vector<int> pdg;

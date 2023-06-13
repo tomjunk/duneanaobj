@@ -25,6 +25,7 @@
   <class name="caf::SRLorentzVector" ClassVersion="10">
     <version ClassVersion="10" checksum="2776633038"/>
   </class>
+
   <class name="caf::SRVector3D" ClassVersion="10">
     <version ClassVersion="10" checksum="2884901936"/>
   </class>
@@ -77,8 +78,6 @@
   <class name="caf::SRRecoParticle" ClassVersion="11">
    <version ClassVersion="11" checksum="1827982951"/>
    <version ClassVersion="10" checksum="2885167555"/>
-  </class>
-
   <class name="std::vector<caf::SRRecoParticle>">
   </class>
 
@@ -138,14 +137,35 @@
   </class>
 
   <class name="caf::SRGAr" ClassVersion="10">
+   <version ClassVersion="11" checksum="575060580"/>
    <version ClassVersion="10" checksum="2529880392"/>
+  </class>
+
+  <class name="caf::SRGArTrack" ClassVersion="11">
+   <version ClassVersion="11" checksum="2689178119"/>
+   <version ClassVersion="10" checksum="4044067765"/>
+  </class>
+
+  <class name="std::vector<caf::SRGArTrack>">
+  </class>
+
+  <class name="caf::SRGArECAL" ClassVersion="11">
+   <version ClassVersion="11" checksum="2202249478"/>
+   <version ClassVersion="10" checksum="4277816864"/>
+  </class>
+
+  <class name="std::vector<caf::SRGArECAL>">
   </class>
 
   <class name="caf::SRTMS" ClassVersion="10">
    <version ClassVersion="10" checksum="418048849"/>
   </class>
 
-
+  <class name="caf::SRSAND" ClassVersion="12">
+   <version ClassVersion="12" checksum="1233697569"/>
+   <version ClassVersion="11" checksum="3795335384"/>
+   <version ClassVersion="10" checksum="1443507594"/>
+  </class>
 
 
   <!-- - - - - - - - - - Truth - - - - - - - - - - - - - - - -->
