@@ -19,8 +19,6 @@ namespace caf
   {
     public:
      
-      char reco_target_nucleus;
-
       std::vector<SRTrack> tracks;
       std::size_t          ntracks  = 0;
 
