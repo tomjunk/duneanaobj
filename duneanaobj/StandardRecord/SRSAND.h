@@ -24,10 +24,7 @@ namespace caf
 
       std::vector<SRShower> showers;
       std::size_t           nshowers = 0;
-  
-      std::vector<SRRecoParticle> recoparticles;
-      std::size_t           nparticles = 0;
-     
+
     };
 
 }
