@@ -44,7 +44,8 @@ namespace caf
 
        /// PDG code of struck nucleon (or, in the case of MEC, struck nucleon-nucleon pair).
        /// For MEC, the codes are: 2000000200 --> nn,  2000000201 --> np,  2000000202 --> pp
-       int   hitnuc = 0;
+       int   hitnuc   = 0;
+       float removalE = NaN;        ///< energy expended to remove nucleon from the nucleus, from GENIE
 
        float       E         = NaN; ///< True energy [GeV]
        SRVector3D  vtx;             ///< Interaction vertex position in detector coord. [cm]
@@ -76,10 +77,16 @@ namespace caf
        float      parent_dcy_E    = NaN; ///< Neutrino parent energy at decay [GeV]
        float      imp_weight      = NaN; ///< Importance weight from flux file
 
-
        Generator                   generator = Generator::kUnknownGenerator;  ///< The generator that created this neutrino interaction
        std::vector<unsigned int>   genVersion;                                ///< Version of the generator that created this neutrino interaction
        std::string                 genConfigString;                           ///< String associated with generator configuration. (For GENIE 3+, this is the "Comprehensive Model Configuration".)
+
+       // shortcuts to avoid iterating through the particle stack for these simple quantities
+       int        nproton  = 0;    ///< number of (post-FSI) primary protons
+       int        nneutron = 0;    ///< number of (post-FSI) primary neutrons
+       int        npip     = 0;    ///< number of (post-FSI) primary pi+
+       int        npim     = 0;    ///< number of (post-FSI) primary pi-
+       int        npi0     = 0;    ///< number of (post-FSI) primary pi0
 
        int                         nprim = 0;        ///< Number of primary particles (helps SRProxy)
        std::vector<SRTrueParticle> prim;             ///< Primary p.  The lepton always comes first in this vector.
