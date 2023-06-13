@@ -38,7 +38,7 @@ namespace caf
   class SRGAr
   {
     public:
-      /// The information needed to uniquely identify a TMS reco object
+      /// The information needed to uniquely identify a ND-GAr reco object
       struct ID
       {
         int        ixn  = -1;            ///< interaction ID
