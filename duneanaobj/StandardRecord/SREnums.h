@@ -128,27 +128,30 @@ namespace caf
   };
 
   /// \brief Neutrino interaction categories.
-  /// These values are taken from nusimdata/SimulationBase/MCNeutrino.h (where
-  /// they are probably copied from some genie header). Duplicating that
-  /// information here is sub-optimal, but less sub-optimal than adding a
-  /// dependency on larsoft to interpret the CAFss.
+  /// Periodically synchronized to GENIE (last update: GENIE 3.04.00) to avoid confusion
+  /// (but we don't want a GENIE dependency for the StandardRecord so we maintain our own copy here).
   enum ScatteringMode
   {
-    kUnknownMode               = -1,
-    kQE                        = 0,
-    kRes                       = 1,
-    kDIS                       = 2,
-    kCoh                       = 3,
-    kCohElastic                = 4,
-    kElectronScattering        = 5,
-    kIMDAnnihilation           = 6,
-    kInverseBetaDecay          = 7,
-    kGlashowResonance          = 8,
+    kUnknownMode               = -100,
+    kQE                        = 1,
+    kSingleKaon                = 2,
+    kDIS                       = 3,
+    kRes                       = 4,
+    kCoh                       = 5,
+    kDiffractive               = 6,
+    kNuElectronElastic         = 7,
+    kInvMuonDecay              = 8,
     kAMNuGamma                 = 9,
     kMEC                       = 10,
-    kDiffractive               = 11,
-    kEM                        = 12,
-    kWeakMix                   = 13
+    kCohElastic                = 11,
+    kInverseBetaDecay          = 12,
+    kGlashowResonance          = 13,
+    kIMDAnnihilation           = 14,
+    kPhotonCoh                 = 15,
+    kPhotonRes                 = 16,
+    kDarkMatterElastic         = 101,
+    kDarkMatterDIS             = 102,
+    kDarkMatterElectron        = 103,
   };
 
   // ----------------------------------------------------------------------
