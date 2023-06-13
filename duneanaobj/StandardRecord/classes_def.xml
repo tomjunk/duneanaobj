@@ -5,7 +5,10 @@
   <class name="std::vector<caf::SRNDTrackAssn>">
   </class>
 
-  <class name="caf::StandardRecord" ClassVersion="13" >
+  <class name="caf::StandardRecord" ClassVersion="16" >
+   <version ClassVersion="16" checksum="3742621703"/>
+   <version ClassVersion="15" checksum="2069864078"/>
+   <version ClassVersion="14" checksum="568060475"/>
    <version ClassVersion="13" checksum="679832893"/>
    <version ClassVersion="12" checksum="2613264685"/>
    <version ClassVersion="11" checksum="3597577923"/>
@@ -23,7 +26,10 @@
    <version ClassVersion="10" checksum="621537544"/>
   </class>
 
-  <class name="caf::SRNDBranch" ClassVersion="13">
+  <class name="caf::SRNDBranch" ClassVersion="16">
+   <version ClassVersion="16" checksum="2181761139"/>
+   <version ClassVersion="15" checksum="688841544"/>
+   <version ClassVersion="14" checksum="2181761139"/>
    <version ClassVersion="13" checksum="688841544"/>
    <version ClassVersion="12" checksum="2431680929"/>
    <version ClassVersion="11" checksum="1041684133"/>
@@ -39,8 +45,20 @@
    <version ClassVersion="10" checksum="2529880392"/>
   </class>
 
+  <class name="caf::SRSAND" ClassVersion="12">
+   <version ClassVersion="12" checksum="1233697569"/>
+   <version ClassVersion="11" checksum="3795335384"/>
+   <version ClassVersion="10" checksum="1443507594"/>
+  </class>
+
   <class name="caf::SRTMS" ClassVersion="10">
    <version ClassVersion="10" checksum="418048849"/>
+  </class>
+
+  <class name="caf::SRRecoParticle" ClassVersion="12">
+   <version ClassVersion="12" checksum="3754441539"/>
+   <version ClassVersion="11" checksum="2986830585"/>
+   <version ClassVersion="10" checksum="1590580641"/>
   </class>
 
   <class name="caf::SRTrack" ClassVersion="13">

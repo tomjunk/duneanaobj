@@ -12,6 +12,8 @@
 #include "duneanaobj/StandardRecord/SRNDLAr.h"
 #include "duneanaobj/StandardRecord/SRNDTrackAssn.h"
 #include "duneanaobj/StandardRecord/SRTMS.h"
+#include "duneanaobj/StandardRecord/SRSAND.h"
+
 
 namespace caf
 {
@@ -21,6 +23,7 @@ namespace caf
       SRNDLAr lar;
       SRGAr   gar;
       SRTMS   tms;
+      SRSAND  sand;
 
       std::size_t ntrkmatch = 0;
       std::vector<caf::SRNDTrackAssn> trkmatch;
