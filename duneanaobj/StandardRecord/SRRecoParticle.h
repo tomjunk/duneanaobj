@@ -1,31 +1,49 @@
 ////////////////////////////////////////////////////////////////////////
 /// \file    SRRecoParticle.h
-/// \brief   information for a reco particle
-/// \author  L. Di Noto
-/// \date    Apr. 2023
-////////////////////////////////////////////////////////////////////////
+/// \brief   A general reconstructed particle container
+/// \author  J. Wolcott <jwolcott@fnal.gov>
+
 
 #ifndef DUNEANAOBJ_SRRECOPARTICLE_H
 #define DUNEANAOBJ_SRRECOPARTICLE_H
 
+#include "duneanaobj/StandardRecord/SREnums.h"
 #include "duneanaobj/StandardRecord/SRLorentzVector.h"
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 
 namespace caf
 {
+  /// \brief Reconstructed particle candidate
   class SRRecoParticle
   {
+    private:
+      // make the uses of it below more readable
+      static constexpr float NaN = std::numeric_limits<float>::signaling_NaN();
+
     public:
+      static constexpr int kPdgHadronicBlob = 2000000002;   ///< Special PDG code used for a "hadronic blob" (usu. calorimetrically reconstructed), borrowed from GENIE
 
-      bool  IsPrimary=false;      //Primary Particle is a particle coming out from neutrino vertex 
-      int   pdg       = 0;   // PDG Code of the reco particle
+      bool        primary  = false;                   ///< Is this reco particle a "primary" one (i.e. emanates directly from the reconstructed vertex)?
 
-      SRParticleTruth particle_true; //True particle association
+      int         pdg      = 0;                       ///< PDG code inferred for this particle.
+      int         tgtA     = 0;                       ///< Atomic number of nucleus this particle was reconstructed in (useful for, e.g., SAND)
 
-      SRLorentzVector p;       ///< Reco energy 4-vector 
-      SRVector3D      start;   ///< Reco start point of the  particle in detector coordinates (cm)
-	
+      float       score    = NaN;                     ///< PID score for this particle, if relevant
+
+      float       E        = NaN;                     ///< Reconstructed energy for this particle
+      PartEMethod E_method = PartEMethod::kUnknownMethod;   ///< Method used to determine energy for the particle
+      SRVector3D  p;                                  ///< Reconstructed momentum for this particle
+
+      SRVector3D  start;                              ///< Reconstructed start point of this particle
+      SRVector3D  end;                                ///< Reconstructed end point of this particle, if that makes sense
+
+      // todo: would we prefer some kind of "extents" thing so that we can make a decision about containment later?
+      //       or should this be the responsibility of the reco module?  (what about stuff that crosses detector boundaries?...)
+      bool        contained = false;
+
+      TrueParticleID truth;                       ///< Associated SRTrueParticle, if relevant (use SRTruthBranch::Particle() with this ID to grab it)
   };
-}
+
+} // caf
 
 #endif //DUNEANAOBJ_SRRECOPARTICLE_H

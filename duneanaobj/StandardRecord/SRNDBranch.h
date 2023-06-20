@@ -10,28 +10,27 @@
 
 #include "duneanaobj/StandardRecord/SRGAr.h"
 #include "duneanaobj/StandardRecord/SRNDLAr.h"
-#include "duneanaobj/StandardRecord/SRNDTrackAssn.h"
-#include "duneanaobj/StandardRecord/SRTMS.h"
+#include "duneanaobj/StandardRecord/SRMINERvA.h"
+#include "duneanaobj/StandardRecord/SRNDAssnBranch.h"
 #include "duneanaobj/StandardRecord/SRSAND.h"
-
+#include "duneanaobj/StandardRecord/SRTMS.h"
 
 namespace caf
 {
   class SRNDBranch
   {
     public:
-      SRNDLAr lar;
-      SRGAr   gar;
-      SRTMS   tms;
-      SRSAND  sand;
+      SRNDLAr   lar;
+      SRGAr     gar;
+      SRTMS     tms;
+      SRSAND    sand;
 
-      std::size_t ntrkmatch = 0;
-      std::vector<caf::SRNDTrackAssn> trkmatch;
-    
-      std::size_t LArID = 0;
-      std::size_t TMSID = 0;
-      float Residual = 0.0;
-      float cosTheta = 0.0;
+      /// MINERvA detector pieces used in conjunction
+      /// with 2x2 prototype in NuMI beam
+      SRMINERvA minerva;
+
+      caf::SRNDTrkAssnBranch trkmatch;
+      caf::SRNDShwAssnBranch shwmatch;
   };
 }
 

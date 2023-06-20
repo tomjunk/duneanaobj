@@ -20,36 +20,44 @@ set(${PROJECT_NAME}_CMAKE_PROJECT_VERSION_STRING 02.04.00)
 
 message(STATUS "\n\n  ==========================   ${PROJECT_NAME}   ==========================")
 
-# cetbuildtools contains our cmake modules
-find_package(cetbuildtools REQUIRED)
+if(DEFINED ENV{UPS_DIR})
+    # cetbuildtools contains our cmake modules
+    find_package(cetbuildtools REQUIRED)
 
-include(CetCMakeEnv)
-cet_cmake_env()
+    include(CetCMakeEnv)
+    cet_cmake_env()
 
-set_install_root()
+    set_install_root()
 
-# The specification of the C++ standard is required because CET macros
-# set it to C++98 by default, and then override it depending on the
-# compiler version, as determined by the compiler qualifier.
-# Removing that qualifier, we need to supply that information manually,
-# and maintain it too.
-cet_set_compiler_flags(DIAGS CAUTIOUS
-  WERROR
-  NO_UNDEFINED
-  ALLOW_DEPRECATIONS
-  EXTRA_FLAGS -pedantic -Wno-unused-local-typedefs -Wno-undefined-var-template -I $ENV{CLANG_FQ_DIR}/include/c++/v1
-)
+    # The specification of the C++ standard is required because CET macros
+    # set it to C++98 by default, and then override it depending on the
+    # compiler version, as determined by the compiler qualifier.
+    # Removing that qualifier, we need to supply that information manually,
+    # and maintain it too.
+    cet_set_compiler_flags(DIAGS CAUTIOUS
+      WERROR
+      NO_UNDEFINED
+      ALLOW_DEPRECATIONS
+      EXTRA_FLAGS -pedantic -Wno-unused-local-typedefs -Wno-undefined-var-template -I $ENV{CLANG_FQ_DIR}/include/c++/v1
+    )
 
-cet_report_compiler_flags()
+    cet_report_compiler_flags()
 
-# these are minimum required versions, not the actual product versions
-find_ups_root(v6_00_00)
-find_ups_product( cetbuildtools )
+    # these are minimum required versions, not the actual product versions
+    find_ups_root(v6_00_00)
+    find_ups_product( cetbuildtools )
 
-include(BuildDictionary)
+    include(BuildDictionary)
+
+    # packaging utility
+    include(UseCPack)
+
+
+else()
+    find_package(ROOT)
+    include_directories(.)
+endif()
 
 add_subdirectory(duneanaobj)
 add_subdirectory(ups)
 
-# packaging utility
-include(UseCPack)

@@ -14,22 +14,31 @@
 
 namespace caf
 {
-  /// SAND reconstruction output
-  class SRSAND
+  /// A SAND reconstructed neutrino interaction
+  class SRSANDInt
   {
     public:
-     
-      char reco_target_nucleus;
-
       std::vector<SRTrack> tracks;
       std::size_t          ntracks  = 0;
 
       std::vector<SRShower> showers;
       std::size_t           nshowers = 0;
-  
-      std::vector<SRRecoParticle> recoparticles;
-      std::size_t           nparticles = 0;
-     
+  };
+
+  /// SAND reconstruction output
+  class SRSAND
+  {
+    public:
+      /// The information needed to uniquely identify a SAND reco object
+      struct ID
+      {
+        int        ixn  = -1;            ///< interaction ID
+        int        idx  = -1;            ///< index in container
+      };
+
+      std::size_t nixn = 0;
+      std::vector<SRGArInt> ixn;       ///< Reconstructed interactions
+
     };
 
 }
