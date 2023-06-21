@@ -68,10 +68,6 @@
    <version ClassVersion="10" checksum="1372801074"/>
   </class>
 
-  <class name="caf::SRVertexBranch" ClassVersion="10">
-   <version ClassVersion="10" checksum="3082548072"/>
-  </class>
-
   <class name="caf::SRRecoParticlesBranch" ClassVersion="10">
    <version ClassVersion="10" checksum="684361603"/>
   </class>

@@ -14,5 +14,8 @@ namespace caf
   template class Proxy<PartEMethod>;
   template class Proxy<ScatteringMode>;
 
+  template class Proxy<NDLAR_RECO_STACK>;
+  template class Proxy<FD_RECO_STACK>;
+
   template class Proxy<TrueParticleID::PartType>;
 }

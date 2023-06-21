@@ -26,24 +26,24 @@ namespace caf
       std::size_t                nshowers  = 0;
   };
 
+  /// The information needed to uniquely identify a MINERvA reco object
+  struct SRMINERvAID
+  {
+    int        ixn  = -1;            ///< interaction ID
+    int        idx  = -1;            ///< index in container
+  };
+
   // just a placeholder for the moment
   class SRMINERvA
   {
     public:
-      /// The information needed to uniquely identify a TMS reco object
-      struct ID
-      {
-        int        ixn  = -1;            ///< interaction ID
-        int        idx  = -1;            ///< index in container
-      };
-
       std::vector<SRMINERvAInt> ixn;       ///< Reconstructed interactions
       std::size_t nixn = 0;
 
       /// Convenience function for use mainly with SRNDTrackAssn and SRNDShowerAssn.
       /// Given an interaction index and object index, return the associated reco object
       template <typename T>
-      const T & Reco(const SRMINERvA::ID& id);
+      const T & Reco(const SRMINERvAID& id);
   };
 
 } // caf
