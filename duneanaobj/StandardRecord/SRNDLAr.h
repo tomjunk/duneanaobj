@@ -23,8 +23,6 @@ namespace caf
       std::size_t           nshowers = 0;
   };
 
-  enum NDLAR_RECO_STACK { kUnknownNDLArReco, kDeepLearnPhys, kPandoraNDLAr };
-
   /// The information needed to uniquely identify an ND-LAr reco object
   struct SRNDLArID
   {
