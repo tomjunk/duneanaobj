@@ -23,12 +23,12 @@ namespace caf
       std::size_t           nshowers = 0;
   };
 
-  enum NDLAR_RECO_STACK { kUnknownReco, kDeepLearnPhys, kPandora };
+  enum NDLAR_RECO_STACK { kUnknownNDLArReco, kDeepLearnPhys, kPandoraNDLAr };
 
   /// The information needed to uniquely identify an ND-LAr reco object
-  class SRNDLArID
+  struct SRNDLArID
   {
-    NDLAR_RECO_STACK reco = kUnknownReco;  ///< reco stack
+    NDLAR_RECO_STACK reco = kUnknownNDLArReco;  ///< reco stack
     int        ixn  = -1;            ///< interaction ID
     int        idx  = -1;            ///< index in container
   };

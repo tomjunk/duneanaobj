@@ -26,12 +26,12 @@ namespace caf
       std::size_t           nshowers = 0;
   };
 
-  enum FD_RECO_STACK { kUnknownReco, kPandora };
+  enum FD_RECO_STACK { kUnknownFDReco, kPandoraFD };
 
   /// The information needed to uniquely identify a FD reco object
   struct SRFDID
   {
-    FD_RECO_STACK reco = kUnknownReco;  ///< reco stack
+    FD_RECO_STACK reco = kUnknownFDReco;  ///< reco stack
     int        ixn  = -1;            ///< interaction ID
     int        idx  = -1;            ///< index in container
   };

@@ -11,7 +11,7 @@ namespace caf
     const std::vector<SRNDLArInt> * ints = nullptr;
     if (id.reco == kDeepLearnPhys)
       ints = &dlp;
-    else if (id.reco == kPandora)
+    else if (id.reco == kPandoraNDLAr)
       ints = &pandora;
     else
       throw std::domain_error("Unknown reco stack: " + std::to_string(id.reco));

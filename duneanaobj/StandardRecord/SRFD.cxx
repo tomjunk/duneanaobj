@@ -9,7 +9,7 @@ namespace caf
                   "Reco() only knows about SRTrack and SRShower!");
 
     const std::vector<SRFDInt> * ints = nullptr;
-    if (id.reco == kPandora)
+    if (id.reco == kPandoraFD)
       ints = &pandora;
     else
       throw std::domain_error("Unknown reco stack: " + std::to_string(id.reco));
