@@ -27,7 +27,7 @@ namespace caf
   };
 
   /// The information needed to uniquely identify a MINERvA reco object
-  struct ID
+  struct SRMINERvAID
   {
     int        ixn  = -1;            ///< interaction ID
     int        idx  = -1;            ///< index in container
@@ -43,7 +43,7 @@ namespace caf
       /// Convenience function for use mainly with SRNDTrackAssn and SRNDShowerAssn.
       /// Given an interaction index and object index, return the associated reco object
       template <typename T>
-      const T & Reco(const SRMINERvA& id);
+      const T & Reco(const SRMINERvAID& id);
   };
 
 } // caf
