@@ -34,17 +34,17 @@ namespace caf
       int gastpc_pi_min_mult;
   };
 
+  /// The information needed to uniquely identify a ND-GAr reco object
+  struct SRGArID
+  {
+    int        ixn  = -1;            ///< interaction ID
+    int        idx  = -1;            ///< index in container
+  };
+
   /// ND-GAr reconstruction output
   class SRGAr
   {
     public:
-      /// The information needed to uniquely identify a ND-GAr reco object
-      struct ID
-      {
-        int        ixn  = -1;            ///< interaction ID
-        int        idx  = -1;            ///< index in container
-      };
-
       std::size_t nixn = 0;
       std::vector<SRGArInt> ixn;       ///< Reconstructed interactions
   };
