@@ -26,18 +26,19 @@ namespace caf
       std::size_t           nshowers = 0;
   };
 
+  enum FD_RECO_STACK { kUnknownReco, kPandora };
+
+  /// The information needed to uniquely identify a FD reco object
+  struct SRFDID
+  {
+    FD_RECO_STACK reco = kUnknownReco;  ///< reco stack
+    int        ixn  = -1;            ///< interaction ID
+    int        idx  = -1;            ///< index in container
+  };
+
   class SRFD
   {
     public:
-       enum RECO_STACK { kUnknownReco, kPandora };
-
-      /// The information needed to uniquely identify a FD reco object
-      struct ID
-      {
-        RECO_STACK reco = kUnknownReco;  ///< reco stack
-        int        ixn  = -1;            ///< interaction ID
-        int        idx  = -1;            ///< index in container
-      };
 
       std::vector<SRFDInt> pandora;       ///< Reconstructed interactions
       std::size_t npandora = 0;
@@ -46,7 +47,7 @@ namespace caf
       /// Given a specific reco pathway (specified with a SRFD::RECO_STACK value),
       /// an interaction index, and a track index, return the associated reco object
       template <typename T>
-      const T & Reco(const SRFD::ID& id);
+      const T & Reco(const SRFDID& id);
   };
 
 } // caf

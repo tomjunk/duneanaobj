@@ -3,7 +3,7 @@
 namespace caf
 {
   template <typename T>
-  const T & SRFD::Reco(const SRFD::ID& id)
+  const T & SRFD::Reco(const SRFDID& id)
   {
     static_assert(std::is_same_v<T, SRTrack> || std::is_same_v<T, SRShower>,
                   "Reco() only knows about SRTrack and SRShower!");
@@ -21,6 +21,6 @@ namespace caf
   }
 
   // explicitly instantiate the template
-  template const SRTrack & SRFD::Reco<SRTrack>(const SRFD::ID& id);
-  template const SRShower & SRFD::Reco<SRShower>(const SRFD::ID& id);
+  template const SRTrack & SRFD::Reco<SRTrack>(const SRFDID& id);
+  template const SRShower & SRFD::Reco<SRShower>(const SRFDID& id);
 }
