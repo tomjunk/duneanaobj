@@ -51,7 +51,8 @@
 
   <!-- - - - - - - - - Common reco - - - - - - - - - - - - - - - - -->
 
-  <class name="caf::SRCommonRecoBranch" ClassVersion="11">
+  <class name="caf::SRCommonRecoBranch" ClassVersion="12">
+   <version ClassVersion="12" checksum="2257468413"/>
    <version ClassVersion="11" checksum="2300096704"/>
    <version ClassVersion="10" checksum="2681983110"/>
   </class>
@@ -68,7 +69,8 @@
    <version ClassVersion="10" checksum="1372801074"/>
   </class>
 
-  <class name="caf::SRRecoParticlesBranch" ClassVersion="10">
+  <class name="caf::SRRecoParticlesBranch" ClassVersion="11">
+   <version ClassVersion="11" checksum="3413162475"/>
    <version ClassVersion="10" checksum="684361603"/>
   </class>
 
@@ -115,7 +117,8 @@
    <version ClassVersion="13" checksum="862452387"/>
   </class>
 
-  <class name="caf::SRFD" ClassVersion="14">
+  <class name="caf::SRFD" ClassVersion="15">
+   <version ClassVersion="15" checksum="1772115525"/>
    <version ClassVersion="14" checksum="126359468"/>
    <version ClassVersion="13" checksum="958085"/>
   </class>
@@ -132,7 +135,8 @@
    <version ClassVersion="10" checksum="2431680929"/>
   </class>
 
-  <class name="caf::SRNDTrackAssn" ClassVersion="12">
+  <class name="caf::SRNDTrackAssn" ClassVersion="13">
+   <version ClassVersion="13" checksum="744508541"/>
    <version ClassVersion="12" checksum="3802670637"/>
    <version ClassVersion="11" checksum="0"/>
     <version ClassVersion="10" checksum="884165698"/>
@@ -140,16 +144,19 @@
   <class name="std::vector<caf::SRNDTrackAssn>">
   </class>
 
-  <class name="caf::SRNDLAr" ClassVersion="10">
+  <class name="caf::SRNDLAr" ClassVersion="11">
+   <version ClassVersion="11" checksum="1183768120"/>
    <version ClassVersion="10" checksum="3845592869"/>
   </class>
 
-  <class name="caf::SRGAr" ClassVersion="10">
+  <class name="caf::SRGAr" ClassVersion="11">
+   <version ClassVersion="11" checksum="10406631"/>
    <version ClassVersion="11" checksum="575060580"/>
    <version ClassVersion="10" checksum="2529880392"/>
   </class>
 
-  <class name="caf::SRGArTrack" ClassVersion="11">
+  <class name="caf::SRGArTrack" ClassVersion="12">
+   <version ClassVersion="12" checksum="3869515338"/>
    <version ClassVersion="11" checksum="2689178119"/>
    <version ClassVersion="10" checksum="4044067765"/>
   </class>
@@ -157,7 +164,8 @@
   <class name="std::vector<caf::SRGArTrack>">
   </class>
 
-  <class name="caf::SRGArECAL" ClassVersion="11">
+  <class name="caf::SRGArECAL" ClassVersion="12">
+   <version ClassVersion="12" checksum="3509084697"/>
    <version ClassVersion="11" checksum="2202249478"/>
    <version ClassVersion="10" checksum="4277816864"/>
   </class>
@@ -165,11 +173,13 @@
   <class name="std::vector<caf::SRGArECAL>">
   </class>
 
-  <class name="caf::SRTMS" ClassVersion="10">
+  <class name="caf::SRTMS" ClassVersion="11">
+   <version ClassVersion="11" checksum="2266596207"/>
    <version ClassVersion="10" checksum="418048849"/>
   </class>
 
-  <class name="caf::SRSAND" ClassVersion="12">
+  <class name="caf::SRSAND" ClassVersion="13">
+   <version ClassVersion="13" checksum="1270542721"/>
    <version ClassVersion="12" checksum="1233697569"/>
    <version ClassVersion="11" checksum="3795335384"/>
    <version ClassVersion="10" checksum="1443507594"/>
@@ -182,7 +192,8 @@
    <version ClassVersion="10" checksum="2608785459"/>
   </class>
 
-  <class name="caf::SRTrueInteraction" ClassVersion="11">
+  <class name="caf::SRTrueInteraction" ClassVersion="12">
+   <version ClassVersion="12" checksum="27666301"/>
    <version ClassVersion="11" checksum="1216771862"/>
    <version ClassVersion="10" checksum="1298199261"/>
   </class>
