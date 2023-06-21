@@ -23,20 +23,20 @@ namespace caf
       std::size_t           nshowers = 0;
   };
 
+  enum NDLAR_RECO_STACK { kUnknownReco, kDeepLearnPhys, kPandora };
+
+  /// The information needed to uniquely identify an ND-LAr reco object
+  class SRNDLArID
+  {
+    NDLAR_RECO_STACK reco = kUnknownReco;  ///< reco stack
+    int        ixn  = -1;            ///< interaction ID
+    int        idx  = -1;            ///< index in container
+  };
+
   /// ND-LAr reconstruction output
   class SRNDLAr
   {
     public:
-      enum RECO_STACK { kUnknownReco, kDeepLearnPhys, kPandora };
-
-      /// The information needed to uniquely identify an ND-LAr reco object
-      struct ID
-      {
-        RECO_STACK reco = kUnknownReco;  ///< reco stack
-        int        ixn  = -1;            ///< interaction ID
-        int        idx  = -1;            ///< index in container
-      };
-
       std::vector<SRNDLArInt> dlp;       ///< Reconstructed interactions from Deep Learn Physics machine-learning reco
       std::size_t ndlp = 0;
       std::vector<SRNDLArInt> pandora;   ///< Reconstructed interactions from Pandora
@@ -46,7 +46,7 @@ namespace caf
       /// Given a specific reco pathway (specified with a SRNDLAr::RECO_STACK value),
       /// an interaction index, and a track index, return the associated reco object
       template <typename T>
-      const T & Reco(const SRNDLAr::ID& id);
+      const T & Reco(const SRNDLArID& id);
   };
 
 }

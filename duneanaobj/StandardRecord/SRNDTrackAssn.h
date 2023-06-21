@@ -17,7 +17,7 @@ namespace caf
       static constexpr float NaN = std::numeric_limits<float>::signaling_NaN();
 
     public:
-      SRNDLAr::ID   larid;     ///< ND-LAr track identifier.  Get the actual SRTrack object using SRNDLAr::Reco<Track>() with this ID, e.g.`sr.nd.lar.Reco<Track>(sr.nd.trkmatch.extrap[1].larid)`
+      SRNDLArID     larid;     ///< ND-LAr track identifier.  Get the actual SRTrack object using SRNDLAr::Reco<Track>() with this ID, e.g.`sr.nd.lar.Reco<Track>(sr.nd.trkmatch.extrap[1].larid)`
       SRTMS::ID     tmsid;     ///< TMS track identifier.   Get the actual SRTrack object using SRTMS::Track() with this ID, e.g.`sr.nd.lar.Track(sr.nd.trkmatch.extrap[1].tmsid)`
       SRMINERvA::ID minervaid; ///< MINERvA track identifier.
       SRGAr::ID     garid;     ///< GAr track identifier.
