@@ -18,7 +18,7 @@ namespace caf
 
     public:
       SRNDLArID     larid;     ///< ND-LAr track identifier.  Get the actual SRTrack object using SRNDLAr::Reco<Track>() with this ID, e.g.`sr.nd.lar.Reco<Track>(sr.nd.trkmatch.extrap[1].larid)`
-      SRTMS::ID     tmsid;     ///< TMS track identifier.   Get the actual SRTrack object using SRTMS::Track() with this ID, e.g.`sr.nd.lar.Track(sr.nd.trkmatch.extrap[1].tmsid)`
+      SRTMSID     tmsid;     ///< TMS track identifier.   Get the actual SRTrack object using SRTMS::Track() with this ID, e.g.`sr.nd.lar.Track(sr.nd.trkmatch.extrap[1].tmsid)`
       SRMINERvA minervaid; ///< MINERvA track identifier.
       SRGArID     garid;     ///< GAr track identifier.
 
