@@ -16,7 +16,7 @@ if(DEFINED CETMODULES_CURRENT_PROJECT_NAME)
     cet_make_library(LIBRARY_NAME duneanaobj_StandardRecordProxy
             SOURCE       SRProxy.cxx Instantiations.cxx
             LIBRARIES    ${ROOT_BASIC_LIB_LIST} ROOT::TreePlayer)
-    install_headers(EXTRAS ${CMAKE_BINARY_DIR}/duneanaobj/StandardRecord/Proxy/SRProxy.h ${CMAKE_BINARY_DIR}/duneanaobj/StandardRecord/Proxy/FwdDeclare.h)
+    install_headers(EXTRAS $ENV{MRB_BUILDDIR}/duneanaobj/duneanaobj/StandardRecord/Proxy/SRProxy.h $ENV{MRB_BUILDDIR}/duneanaobj/duneanaobj/StandardRecord/Proxy/FwdDeclare.h)
 else()
     add_library(duneanaobj_StandardRecordProxy
                 SRProxy.cxx Instantiations.cxx)
