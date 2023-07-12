@@ -57,7 +57,19 @@
    <version ClassVersion="10" checksum="2681983110"/>
   </class>
 
-  <class name="caf::SRNeutrinoHypothesisBranch" ClassVersion="10">
+  <class name="caf::SRInteractionBranch" ClassVersion="10">
+   <version ClassVersion="10" checksum="1911225621"/>
+  </class>
+
+  <class name="caf::SRInteraction" ClassVersion="10">
+   <version ClassVersion="10" checksum="2468658506"/>
+  </class>
+
+  <class name="caf::SRDirectionBranch" ClassVersion="10">
+   <version ClassVersion="10" checksum="2433306859"/>
+  </class>
+
+    <class name="caf::SRNeutrinoHypothesisBranch" ClassVersion="10">
    <version ClassVersion="10" checksum="3470794688"/>
   </class>
 
@@ -88,7 +100,8 @@
 
   <!-- - - - - - - - Types used in det-specific situations - - - - -->
 
-  <class name="caf::SRTrack" ClassVersion="16">
+  <class name="caf::SRTrack" ClassVersion="17">
+   <version ClassVersion="17" checksum="3391134008"/>
    <version ClassVersion="16" checksum="3368125268"/>
    <version ClassVersion="15" checksum="0"/>
    <version ClassVersion="14" checksum="514514930"/>
@@ -101,7 +114,8 @@
   <class name="std::vector<caf::SRTrack>">
   </class>
 
-  <class name="caf::SRShower" ClassVersion="13">
+  <class name="caf::SRShower" ClassVersion="14">
+   <version ClassVersion="14" checksum="772507687"/>
    <version ClassVersion="13" checksum="749498947"/>
    <version ClassVersion="12" checksum="0"/>
    <version ClassVersion="11" checksum="749498947"/>
@@ -155,7 +169,8 @@
    <version ClassVersion="10" checksum="2529880392"/>
   </class>
 
-  <class name="caf::SRGArTrack" ClassVersion="12">
+  <class name="caf::SRGArTrack" ClassVersion="13">
+   <version ClassVersion="13" checksum="3987769238"/>
    <version ClassVersion="12" checksum="3869515338"/>
    <version ClassVersion="11" checksum="2689178119"/>
    <version ClassVersion="10" checksum="4044067765"/>
