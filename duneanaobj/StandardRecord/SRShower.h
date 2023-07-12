@@ -20,7 +20,7 @@ namespace caf
       SRVector3D direction;  ///< Shower 3D end point [cm]
       float Evis = -999.;    ///< Visible energy in voxels corresponding to this shower
 
-      SRTrueParticle truth;  ///< Best-match GEANT truth particle for this track
+      TrueParticleID truth;  ///< Best-match GEANT truth particle for this track.  Use SRTruthBranch::Particle() to obtain this particle
   };
 
 }
