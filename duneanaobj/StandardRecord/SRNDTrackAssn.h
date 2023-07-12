@@ -17,10 +17,10 @@ namespace caf
       static constexpr float NaN = std::numeric_limits<float>::signaling_NaN();
 
     public:
-      SRNDLArID     larid;     ///< ND-LAr track identifier.  Get the actual SRTrack object using SRNDLAr::Reco<Track>() with this ID, e.g.`sr.nd.lar.Reco<Track>(sr.nd.trkmatch.extrap[1].larid)`
-      SRTMSID     tmsid;     ///< TMS track identifier.   Get the actual SRTrack object using SRTMS::Track() with this ID, e.g.`sr.nd.lar.Track(sr.nd.trkmatch.extrap[1].tmsid)`
-      SRMINERvA minervaid; ///< MINERvA track identifier.
-      SRGArID     garid;     ///< GAr track identifier.
+      SRNDLArID  larid;     ///< ND-LAr track identifier.  Get the actual SRTrack object using SRNDLAr::Reco<Track>() with this ID, e.g.`sr.nd.lar.Reco<Track>(sr.nd.trkmatch.extrap[1].larid)`
+      SRTMSID    tmsid;     ///< TMS track identifier.   Get the actual SRTrack object using SRTMS::Track() with this ID, e.g.`sr.nd.lar.Track(sr.nd.trkmatch.extrap[1].tmsid)`
+      SRMINERvA  minervaid; ///< MINERvA track identifier.
+      SRGArID    garid;     ///< GAr track identifier.
 
 
       float transdispl  = NaN;     ///< perpendicular distance between the two tracks at longitudinal position of matching point
