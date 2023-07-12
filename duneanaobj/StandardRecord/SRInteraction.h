@@ -18,6 +18,8 @@ namespace caf
   class SRInteraction
   {
     public:
+      long int id = -1;
+
       /// Reconstructed vertex location (if any)
       SRVector3D vtx;
 
