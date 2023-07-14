@@ -37,6 +37,8 @@ namespace caf
       /// Recommend users convert back to TLorentzVector for boosts etc
       operator TLorentzVector() const;
 
+      SRLorentzVector & operator=(const TLorentzVector& vec);
+
       // For access as a position vector. For momentum use the member variables
       // directly.
       float T() const {return E;}

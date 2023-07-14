@@ -38,8 +38,9 @@ namespace caf
       void SetXYZ(float x, float y, float z);
 
 #if !defined(__GCCXML__) && !defined(__castxml__)
-      /// Easy conversion back to TVector3
+      /// Easy conversion to and from TVector3
       operator TVector3() const;
+      SRVector3D & operator=(const TVector3& vec);
 
       void SetX(float _x){x = _x;}
       void SetY(float _y){y = _y;}
