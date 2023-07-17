@@ -21,6 +21,9 @@
 // namespace std{class string{};}
 // #endif
 
+#ifdef __GNUC__
+#undef _GLIBCXX_HAVE_BUILTIN_IS_CONSTANT_EVALUATED
+#endif
 #include <string>
 
 #include <vector>
