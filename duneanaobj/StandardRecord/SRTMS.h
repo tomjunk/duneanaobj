@@ -17,8 +17,9 @@ namespace caf
   };
 
   /// The information needed to uniquely identify a TMS reco object
-  struct SRTMSID
+  class SRTMSID
   {
+  public:
     int        ixn  = -1;            ///< interaction ID
     int        idx  = -1;            ///< index in container
   };
