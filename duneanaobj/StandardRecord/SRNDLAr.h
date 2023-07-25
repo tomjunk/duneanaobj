@@ -24,8 +24,9 @@ namespace caf
   };
 
   /// The information needed to uniquely identify an ND-LAr reco object
-  struct SRNDLArID
+  class SRNDLArID
   {
+  public:
     NDLAR_RECO_STACK reco = kUnknownNDLArReco;  ///< reco stack
     int        ixn  = -1;            ///< interaction ID
     int        idx  = -1;            ///< index in container

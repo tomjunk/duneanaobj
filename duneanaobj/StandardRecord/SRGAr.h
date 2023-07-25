@@ -35,8 +35,10 @@ namespace caf
   };
 
   /// The information needed to uniquely identify a ND-GAr reco object
-  struct SRGArID
+  class SRGArID
   {
+    public:
+    
     int        ixn  = -1;            ///< interaction ID
     int        idx  = -1;            ///< index in container
   };
