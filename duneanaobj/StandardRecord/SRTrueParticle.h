@@ -36,7 +36,7 @@ namespace caf
       SRVector3D      start_pos;        ///< Particle generation position [cm]
       SRVector3D      end_pos;          ///< Particle end position (decay, interaction, stop) [cm]
 
-      unsigned int parent;                 ///< GEANT4 trackID of parent particle from this particle
+      int parent               = -1;       ///< GEANT4 trackID of parent particle from this particle
       std::vector<unsigned int> daughters; ///< GEANT4 trackIDs of daughter particles from this particle
 
       G4Process   start_process;   ///< GEANT4 process that created this particle (kPrimary means 'came from GENIE')
