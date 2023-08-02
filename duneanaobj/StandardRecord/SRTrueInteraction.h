@@ -33,7 +33,7 @@ namespace caf
        static constexpr float NaN = std::numeric_limits<float>::signaling_NaN();
 
      public:
-       int   id      = 0;         ///< Interaction ID == GENIE event record number (== genie::NtpMCRecHeader::ievent)
+       int   id      = -1;         ///< Interaction ID == GENIE event record number (== genie::NtpMCRecHeader::ievent)
 
        int   pdg     = 0;         ///< PDG code of probe particle
        int   pdgorig = 0;         ///< Initial (unoscillated) PDG code of probe neutrino (may be different than `pdg` if this file is a 'swap' file)
