@@ -41,7 +41,8 @@ namespace caf
       //       or should this be the responsibility of the reco module?  (what about stuff that crosses detector boundaries?...)
       bool        contained = false;
 
-      TrueParticleID truth;                       ///< Associated SRTrueParticle, if relevant (use SRTruthBranch::Particle() with this ID to grab it)
+      std::vector<TrueParticleID> truth;              ///< Associated SRTrueParticle(s), if relevant (use SRTruthBranch::Particle() with these IDs to grab them)
+      std::vector<float>   truthOverlap;              ///< Fractional overlap between this reco particle and true particle
   };
 
 } // caf
