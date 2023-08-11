@@ -202,7 +202,9 @@
    <version ClassVersion="10" checksum="1443507594"/>
   </class>
 
-
+  <class name="caf::SRMINERvA"  ClassVersion="10">
+   <version ClassVersion="10" checksum="1718167975"/>
+  </class>
   <!-- - - - - - - - - - Truth - - - - - - - - - - - - - - - -->
 
   <class name="caf::SRTruthBranch" ClassVersion="10">

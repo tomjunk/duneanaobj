@@ -157,8 +157,10 @@ namespace caf
   // ----------------------------------------------------------------------
   // now some enums that are used internally so one branch can easily refer to another
 
-  struct TrueParticleID
+  class TrueParticleID
   {
+    public:
+    
       enum PartType { kUnknown, kPrimary, kPrimaryBeforeFSI, kSecondary };
 
       int      ixn  = -1;       ///< Index of SRInteraction in the SRTruthBranch
