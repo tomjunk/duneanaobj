@@ -18,6 +18,8 @@ namespace caf
   class SRInteraction
   {
     public:
+      long int id = -1;
+
       /// Reconstructed vertex location (if any)
       SRVector3D vtx;
 
@@ -32,6 +34,9 @@ namespace caf
 
       /// Collections of reconstructed particles
       SRRecoParticlesBranch part;
+
+      std::vector<std::size_t>    truth;              ///< Indices of SRTrueInteraction(s), if relevant (use this index in SRTruthBranch::nu to get them)
+      std::vector<float>   truthOverlap;              ///< Fractional overlap between this reco interaction and each true interaction
 
   };
 

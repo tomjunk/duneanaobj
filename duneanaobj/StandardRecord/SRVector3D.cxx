@@ -36,6 +36,12 @@ namespace caf
     return TVector3(x, y, z);
   }
 
+  SRVector3D &SRVector3D::operator=(const TVector3& vec)
+  {
+    SetXYZ(vec.X(), vec.Y(), vec.Z());
+    return *this;
+  }
+
 }
 
 std::ostream &operator<<(std::ostream &stream, const caf::SRVector3D &vec)

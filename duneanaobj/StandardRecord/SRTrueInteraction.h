@@ -39,7 +39,12 @@ namespace caf
        static constexpr float NaN = std::numeric_limits<float>::signaling_NaN();
 
      public:
-       bool  isvtxcont = false;   ///< Is true vertex is within detector?  If not, might be a rock particle or cosmic
+       long int  id       = -1;   ///< Interaction ID == 'vertexID' from edep-sim (ND) or GENIE record id (FD)
+       
+       /// Index of interaction in GENIE tree.
+       /// Note: for ND, check `id` to determine whether
+       /// it's the tree for contained nus (<1e9) or rock/hall nus (>1e9)
+       long int  genieIdx = -1;
 
        int   pdg     = 0;         ///< PDG code of probe particle
        int   pdgorig = 0;         ///< Initial (unoscillated) PDG code of probe neutrino (may be different than `pdg` if this file is a 'swap' file)
@@ -56,17 +61,16 @@ namespace caf
        float       E         = NaN; ///< True energy [GeV]
        SRVector3D  vtx;             ///< Interaction vertex position in detector coord. [cm]
        SRVector3D  momentum;        ///< Neutrino three-momentum
-       SRVector3D  position;        ///< Neutrino interaction position
+       bool  isvtxcont = false;     ///< Is true vertex is within detector?  If not, might be a rock particle or cosmic
 
        float time         = NaN;    ///< True interaction time
-       float bjorkenX     = NaN;    ///< Bjorken x = (k-k')^2/(2*p.q) [Dimensionless]
+       float bjorkenX     = NaN;    ///< Bjorken x = (k-k')^2/(2*p.q) = Q^2/(2*Mnuc*q0) [Dimensionless]
        float inelasticity = NaN;    ///< Inelasticity y = (p.q) / (k.p) = q0 / Enu
-       float Q2           = NaN;    ///< Invariant four-momentum transfer from lepton to nuclear system
+       float Q2           = NaN;    ///< Invariant four-momentum transfer from lepton to nuclear system, Q^2 = -(nu - lep)^2
        float q0           = NaN;    ///< Energy transferred from lepton to nuclear system (in lab frame)
        float modq         = NaN;    ///< Magnitude of three-momentum transferred from lepton to nuclear system, |q| (in lab frame)
-       float W            = NaN;    ///< Hadronic invariant mass W [GeV^2]
+       float W            = NaN;    ///< Hadronic invariant mass W [GeV^2].  "Experimental W" in GENIE parlance, W^2 = M^2 + 2*Mnuc*q0 +|q|^2
        float t            = NaN;    ///< Kinematic t
-       float baseline     = NaN;    ///< Distance from decay to interaction [m]
 
        // GENIE truth stuff
        bool  ischarm    = false;    ///< Did neutrino scatter from a charmed quark?
@@ -76,6 +80,7 @@ namespace caf
 
        float genweight = NaN;       ///< Weight, if any, assigned by the generator
 
+       float baseline             = NaN; ///< Distance from decay to interaction [m]
        SRVector3D prod_vtx;              ///< Neutrino production vertex [cm; beam coordinates]
        SRVector3D parent_dcy_mom;        ///< Neutrino parent momentum at decay [GeV; beam coordinates]
        int        parent_dcy_mode = -1;  ///< Parent hadron/muon decay mode

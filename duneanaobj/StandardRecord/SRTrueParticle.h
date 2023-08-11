@@ -25,10 +25,10 @@ namespace caf
       static constexpr float NaN = std::numeric_limits<float>::signaling_NaN();
 
     public:
-      int      pdg             = 0;     ///< Particle
-      int      G4ID            = -1;    ///< ID of the particle (taken from GEANT4 -- -1 if this particle is not propogated by G4)
-      int      interaction_id  = -1;    ///< True interaction ID of the source of this particle
-      float    time            = NaN;   ///< Generation time at true interaction vertex [ns]
+      int       pdg             = 0;     ///< Particle
+      int       G4ID            = -1;    ///< ID of the particle (taken from GEANT4 -- -1 if this particle is not propogated by G4)
+      long int  interaction_id  = -1;    ///< True interaction ID (edep-sim 'vertexID' for ND, or GENIe record number for FD) of the source of this particle
+      float     time            = NaN;   ///< Generation time at true interaction vertex [ns]
 
       TrueParticleID  ancestor_id;      ///< The primary particle this particle descended from, if relevant
 
@@ -36,7 +36,7 @@ namespace caf
       SRVector3D      start_pos;        ///< Particle generation position [cm]
       SRVector3D      end_pos;          ///< Particle end position (decay, interaction, stop) [cm]
 
-      unsigned int parent;                 ///< GEANT4 trackID of parent particle from this particle
+      int parent               = -1;       ///< GEANT4 trackID of parent particle from this particle
       std::vector<unsigned int> daughters; ///< GEANT4 trackIDs of daughter particles from this particle
 
       G4Process   start_process;   ///< GEANT4 process that created this particle (kPrimary means 'came from GENIE')

@@ -30,18 +30,19 @@ namespace caf
 
       float       score    = NaN;                     ///< PID score for this particle, if relevant
 
-      float       E        = NaN;                     ///< Reconstructed energy for this particle
+      float       E        = NaN;                     ///< Reconstructed energy for this particle [GeV]
       PartEMethod E_method = PartEMethod::kUnknownMethod;   ///< Method used to determine energy for the particle
       SRVector3D  p;                                  ///< Reconstructed momentum for this particle
 
-      SRVector3D  start;                              ///< Reconstructed start point of this particle
-      SRVector3D  end;                                ///< Reconstructed end point of this particle, if that makes sense
+      SRVector3D  start;                              ///< Reconstructed start point of this particle [cm]
+      SRVector3D  end;                                ///< Reconstructed end point of this particle, if that makes sense [cm]
 
       // todo: would we prefer some kind of "extents" thing so that we can make a decision about containment later?
       //       or should this be the responsibility of the reco module?  (what about stuff that crosses detector boundaries?...)
       bool        contained = false;
 
-      TrueParticleID truth;                       ///< Associated SRTrueParticle, if relevant (use SRTruthBranch::Particle() with this ID to grab it)
+      std::vector<TrueParticleID> truth;              ///< Associated SRTrueParticle(s), if relevant (use SRTruthBranch::Particle() with these IDs to grab them)
+      std::vector<float>   truthOverlap;              ///< Fractional overlap between this reco particle and true particle
   };
 
 } // caf

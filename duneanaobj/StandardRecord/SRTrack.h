@@ -7,6 +7,7 @@
 #ifndef DUNEANAOBJ_SRTRACK_H
 #define DUNEANAOBJ_SRTRACK_H
 
+#include "duneanaobj/StandardRecord/SREnums.h"
 #include "duneanaobj/StandardRecord/SRVector3D.h"
 #include "duneanaobj/StandardRecord/SRTrueParticle.h"
 
@@ -33,7 +34,7 @@ namespace caf
 
       float E = NaN;         ///< Track energy estimate in MeV
 
-      SRTrueParticle truth; ///< Best-match GEANT truth particle for this track
+      TrueParticleID truth;  ///< Best-match GEANT truth particle for this track.  Use SRTruthBranch::Particle() to obtain this particle
   };
 
 }

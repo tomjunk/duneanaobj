@@ -14,7 +14,12 @@ if(DEFINED CETMODULES_CURRENT_PROJECT_NAME)
                      LIBRARIES    ${ROOT_BASIC_LIB_LIST} ROOT::TreePlayer
                      )
 
-    install_headers(EXTRAS $ENV{MRB_BUILDDIR}/duneanaobj/duneanaobj/StandardRecord/Flat/FlatRecord.h $ENV{MRB_BUILDDIR}/duneanaobj/duneanaobj/StandardRecord/Flat/FwdDeclare.h)
+    if (DEFINED ENV{MRB_BUILDDIR} AND NOT "$ENV{MRB_BUILDDIR}" STREQUAL "")
+        set(builddir $ENV{MRB_BUILDDIR}/duneanaobj)
+    else()
+        set(builddir ${CMAKE_BINARY_DIR})
+    endif()
+    install_headers(EXTRAS ${builddir}/duneanaobj/StandardRecord/Flat/FlatRecord.h ${builddir}/duneanaobj/StandardRecord/Flat/FwdDeclare.h)
 else()
     add_library(duneanaobj_StandardRecordFlat
                 FlatRecord.cxx)

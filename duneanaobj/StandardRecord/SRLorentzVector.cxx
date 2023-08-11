@@ -7,6 +7,8 @@
 
 #include <limits>
 
+#include "TLorentzVector.h"
+
 namespace caf
 {
   SRLorentzVector::SRLorentzVector() :
@@ -24,6 +26,16 @@ namespace caf
   SRLorentzVector::operator TLorentzVector() const
   {
     return TLorentzVector(px, py, pz, E);
+  }
+
+  SRLorentzVector &SRLorentzVector::operator=(const TLorentzVector &vec)
+  {
+    E = vec.E();
+    px = vec.Px();
+    py = vec.Py();
+    pz = vec.Pz();
+
+    return *this;
   }
 
 } // end namespace caf
