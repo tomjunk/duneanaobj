@@ -33,7 +33,12 @@ namespace caf
        static constexpr float NaN = std::numeric_limits<float>::signaling_NaN();
 
      public:
-       int   id      = -1;         ///< Interaction ID == GENIE event record number (== genie::NtpMCRecHeader::ievent)
+       long int  id       = -1;   ///< Interaction ID == 'vertexID' from edep-sim (ND) or GENIE record id (FD)
+       
+       /// Index of interaction in GENIE tree.
+       /// Note: for ND, check `id` to determine whether
+       /// it's the tree for contained nus (<1e9) or rock/hall nus (>1e9)
+       long int  genieIdx = -1;
 
        int   pdg     = 0;         ///< PDG code of probe particle
        int   pdgorig = 0;         ///< Initial (unoscillated) PDG code of probe neutrino (may be different than `pdg` if this file is a 'swap' file)
