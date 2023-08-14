@@ -21,9 +21,13 @@
 // namespace std{class string{};}
 // #endif
 
-#ifdef __GNUC__
-#undef _GLIBCXX_HAVE_BUILTIN_IS_CONSTANT_EVALUATED
-#endif
+// a less ugly hack, works with castxml v0_4_2 and e20, c7 and e26 but not c14
+// not needed for castxml v0_5_1
+
+//#ifdef __GNUC__
+//#undef _GLIBCXX_HAVE_BUILTIN_IS_CONSTANT_EVALUATED
+//#endif
+
 #include <string>
 
 #include <vector>
